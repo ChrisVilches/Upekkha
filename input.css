@@ -1,4 +1,67 @@
 /*
 TODO: I have to minify the final CSS output.
 */
+
+
 @import "./gutenberg.css";
+
+.main-nav {
+  @apply mt-4;
+  .menu-item {
+    a, button {
+      @apply block;
+      @apply text-slate-200;
+      @apply hover:text-slate-100;
+      @apply hover:bg-slate-800;
+      @apply p-2;
+      @apply rounded-md;
+      @apply transition-colors;
+      @apply duration-500;
+    }
+  }
+  
+  .current-menu-item a {
+    @apply text-slate-100;
+    @apply font-bold;
+    @apply bg-slate-800;
+  }
+
+  @media screen(md) {
+    .menu {
+      @apply inline;
+    }
+
+    .menu-item {
+      @apply inline-block;
+      a, button {
+        @apply text-slate-200;
+        @apply hover:text-slate-100;
+        @apply hover:bg-slate-800;
+        @apply p-2;
+        @apply rounded-md;
+        @apply transition-colors;
+        @apply duration-500;
+      }
+    }
+    
+    .current-menu-item a {
+      @apply text-slate-100;
+      @apply font-bold;
+      @apply bg-slate-800;
+    }
+  }
+    
+}
+
+.content-container { 
+  p {
+    @apply mb-10;
+    @apply leading-9;
+  }
+
+  ul {
+    @apply mb-10;
+    @apply list-disc;
+    @apply list-inside;
+  }
+}

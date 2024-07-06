@@ -1,40 +1,47 @@
-<!-- TODO: "pages" aren't shown using this template -->
+<? if (have_posts()) : while (have_posts()) : the_post() ?>
+    <article class="content-container">
+      <h1 class="px-10 text-3xl mb-10 font-bold">
+        <? the_title() ?>
+      </h1>
 
-<!DOCTYPE html>
-<html <? language_attributes() ?>>
-
-<head>
-  <meta charset="<? bloginfo("charset") ?>">
-  <? wp_head() ?>
-</head>
-
-<body>
-  <? wp_body_open() ?>
-  <? get_header() ?>
-
-  <main>
-    <? if (have_posts()) : ?>
-      <div class="nav-previous alignleft"><? next_posts_link('Older posts') ?></div>
-      <div class="nav-next alignright"><? previous_posts_link('Newer posts') ?></div>
-
-      <? while (have_posts()) : the_post() ?>
-        <div style="border: 1px solid black; padding: 5px; margin: 5px;">
-          Reading "<? the_title() ?>"
-          <? # Or use the URL: the_post_thumbnail_url() 
-          ?>
-          <?= the_post_thumbnail("post-thumbnail") ?>
-          <? the_content() ?>
-          <? foreach (get_tags() as $tag) : ?>
-            <?= $tag->name ?>
-          <? endforeach ?>
+      <div class="px-10 text-slate-600 mb-10">
+        <div class="flex items-center space-x-2">
+          <svg class="size-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+          </svg>
+          <div>
+            <?= get_the_date() ?>
+          </div>
         </div>
-      <? endwhile ?>
-    <? endif ?>
-  </main>
 
-  <? get_footer() ?>
-  <!-- TODO: Not working. Scripts are added at the top -->
-  <? wp_footer() ?>
-</body>
+        <div class="flex items-center space-x-2">
+          <svg class="size-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"></path>
+          </svg>
+          <div>
+            <?= get_the_author() ?>
+          </div>
+        </div>
+      </div>
 
-</html>
+      <? # Or use the URL: the_post_thumbnail_url() 
+      ?>
+      <div class="inline-flex justify-center w-full mb-20">
+        <?= the_post_thumbnail("post-thumbnail") ?>
+      </div>
+
+      <div class="px-10">
+        <? the_content() ?>
+
+        <!-- TODO: Replace all (or most??) SVG icons with Font Awesome stuff -->
+
+        <? foreach (get_tags() as $tag) : ?>
+          <a href="<?= get_tag_link($tag) ?>" class="inline-block rounded-md p-2 text-slate-600 hover:text-slate-800">
+            <i class="fa fa-hashtag mr-1.5"></i><?= $tag->name ?>
+          </a>
+        <? endforeach ?>
+      </div>
+
+    </article>
+  <? endwhile ?>
+<? endif ?>

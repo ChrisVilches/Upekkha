@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Heading Blocks */
+.wp-block-heading {
+  @apply font-bold;
+  @apply font-bold;
+  @apply mt-2;
+  @apply mb-4;
+}
+
+/* Paragraph Block */
+.wp-block-paragraph {
+}
+
+/* Image Block */
+.wp-block-image {
+}
+
+.wp-block-image img {
+}
+
+/* Gallery Block */
+.wp-block-gallery {
+}
+
+.wp-block-gallery img {
+}
+
+/* Quote Block */
+.wp-block-quote {
+}
+
+.wp-block-quote p {
+}
+
+.wp-block-quote cite {
+}
+
+/* List Block */
+.wp-block-list {
+}
+
+.wp-block-list li {
+}
+
+/* Table Block */
+.wp-block-table {
+}
+
+.wp-block-table table {
+}
+
+.wp-block-table th {
+}
+
+.wp-block-table td {
+}
+
+/* Media & Text Block */
+.wp-block-media-text {
+}
+
+.wp-block-media-text__content {
+}
+
+/* Columns Block */
+.wp-block-columns {
+}
+
+.wp-block-column {
+}
+
+/* Button Block */
+.wp-block-button {
+}
+
+.wp-block-button__link {
+}
+
+/* Spacer Block */
+.wp-block-spacer {
+}
+
+/* Separator Block */
+.wp-block-separator {
+}
+
+.wp-block-separator.is-style-dots {
+}
+
+/* Group Block */
+.wp-block-group {
+}
+
+/* Cover Block */
+.wp-block-cover {
+}
+
+.wp-block-cover__image {
+}
+
+/* Video Block */
+.wp-block-video {
+}
+
+.wp-block-video video {
+}
+
+/* Audio Block */
+.wp-block-audio {
+}
+
+.wp-block-audio audio {
+}
+
+/* Code Block */
+.wp-block-code {
+}
+
+.wp-block-code code {
+}
+
+/* Preformatted Block */
+.wp-block-preformatted {
+}
+
+/* Pullquote Block */
+.wp-block-pullquote {
+}
+
+.wp-block-pullquote p {
+}
+
+.wp-block-pullquote cite {
+}
+
+/* Table of Contents Block */
+.wp-block-toc {
+}
+
+.wp-block-toc__list {
+}
+
+.wp-block-toc__item {
+}
+
+.wp-block-toc__item a {
+}
+
+/* Custom HTML Block */
+.wp-block-custom-html {
+}
+
+/* Shortcode Block */
+.wp-block-shortcode {
+}
+
+/* Embed Block */
+.wp-block-embed {
+}
+
+.wp-block-embed__wrapper {
+}
+
+/* Verse Block */
+.wp-block-verse {
+}
+
+/* Social Icons Block */
+.wp-block-social-links {
+}
+
+.wp-block-social-link {
+}
+
+/* Columns Block */
+.wp-block-columns {
+}
+
+.wp-block-column {
+}
+
+/* Site Title Block */
+.wp-block-site-title {
+}
+
+/* Site Tagline Block */
+.wp-block-site-tagline {
+}
+
+/* Site Logo Block */
+.wp-block-site-logo {
+}
+
+/* Post Title Block */
+.wp-block-post-title {
+}
+
+/* Post Content Block */
+.wp-block-post-content {
+}
+
+/* Navigation Block */
+.wp-block-navigation {
+}
+
+.wp-block-navigation-link {
+}

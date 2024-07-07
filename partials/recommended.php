@@ -18,7 +18,7 @@
               <a href="<?= the_permalink() ?>" class="flex justify-center items-center h-full absolute w-full bg-white">
                 <div class="w-3/4 md:w-1/2 flex justify-center items-center h-full">
 
-                  <p class="font-bold text-lg text-black hover:text-black z-50">
+                  <p class="font-bold text-lg text-black hover:text-black z-50 text-center">
                     <? the_title() ?>
                   </p>
                 </div>

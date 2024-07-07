@@ -49,8 +49,11 @@ TODO: I have to minify the final CSS output.
       @apply font-bold;
       @apply bg-slate-800;
     }
-  }
-    
+  }    
+}
+
+img.custom-logo {
+  @apply rounded-full;
 }
 
 .content-container { 

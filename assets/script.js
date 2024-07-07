@@ -7068,6 +7068,7 @@
     window.Carousel = Carousel;
     window.initCarousels = initCarousels;
   }
+  var carousel_default = Carousel;
 
   // node_modules/flowbite/lib/esm/components/dismiss/index.js
   var __assign4 = function() {
@@ -13482,11 +13483,7 @@
 
   // input.js
   var import_jquery = __toESM(require_jquery());
-  var searchModal;
-  window.openSearchModal = () => {
-    searchModal.show();
-  };
-  (0, import_jquery.default)(() => {
+  function initSearchModal() {
     const $modal = (0, import_jquery.default)("#search-modal").first();
     $modal.find("form").on("submit", (ev) => {
       const $form = (0, import_jquery.default)(ev.target);
@@ -13501,7 +13498,41 @@
         $modal.find("input[type=text]").trigger("focus");
       }
     };
-    searchModal = new modal_default($modal[0], options);
+    const searchModal = new modal_default($modal[0], options);
+    (0, import_jquery.default)("button[data-open-search-modal]").on("click", () => {
+      console.log(searchModal);
+      searchModal.show();
+    });
+  }
+  function initRecommendedCarousel() {
+    const element = document.getElementById("recommended-carousel");
+    const items = import_jquery.default.map((0, import_jquery.default)("[data-carousel-item]"), (el, position) => {
+      return { position, el };
+    });
+    const indicators = import_jquery.default.map((0, import_jquery.default)("[data-carousel-indicator]"), (el, position) => {
+      return { position, el };
+    });
+    const options = {
+      defaultPosition: 0,
+      interval: 3e3,
+      indicators: {
+        items: indicators,
+        activeClasses: "bg-slate-600",
+        inactiveClasses: "bg-slate-200"
+      }
+    };
+    const instanceOptions = {
+      id: "recommended-carousel",
+      override: true
+    };
+    const carousel = new carousel_default(element, items, options, instanceOptions);
+    carousel.cycle();
+    (0, import_jquery.default)("[data-carousel-prev]").on("click", carousel.prev.bind(carousel));
+    (0, import_jquery.default)("[data-carousel-next]").on("click", carousel.next.bind(carousel));
+  }
+  (0, import_jquery.default)(() => {
+    initSearchModal();
+    initRecommendedCarousel();
   });
 })();
 /*! Bundled license information:

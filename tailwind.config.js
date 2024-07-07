@@ -8,11 +8,14 @@ module.exports = {
     "!./assets"
   ],
   theme: {
+    container: {
+      center: true
+    },
     screens: {
-      'sm': '640px', // => @media (min-width: 640px) { ... }
-      'md': '748px', // => @media (min-width: 768px) { ... }
-      'lg': '784px', // => @media (min-width: 1024px) { ... }
-      'xl': '1000px', // => @media (min-width: 1280px) { ... }
+      'sm': '640px',
+      'md': '748px',
+      'lg': '784px',
+      'xl': '1000px'
     }
   },
   plugins: [require('flowbite/plugin')],

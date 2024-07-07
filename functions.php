@@ -61,6 +61,23 @@ class CustomTheme
 
     return false;
   }
+
+  static function get_related_posts()
+  {
+    global $post;
+
+    $tag_ids = array_map(fn ($t) => $t->term_id, wp_get_post_tags($post->ID));
+
+    $args = array(
+      'posts_per_page' => 5,
+      'tag__in' => $tag_ids,
+      'post__not_in' => array($post->ID),
+      'ignore_sticky_posts' => 1,
+      'orderby' => 'rand'
+    );
+
+    return new WP_Query($args);
+  }
 }
 
 // TODO: Add configurations (SNS links, etc).

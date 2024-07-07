@@ -72,3 +72,12 @@ img.custom-logo {
     @apply list-inside;
   }
 }
+
+/* Apply this style only to the Dracula theme. For other themes it doesn't look very good. */
+.enlighter-t-dracula.enlighter-default {
+  .enlighter-code {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  border-radius: 10px;
+}

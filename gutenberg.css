@@ -55,10 +55,14 @@ h3.wp-block-heading, h4.wp-block-heading {
 }
 
 .wp-block-quote p {
+  @apply pb-2;
+  @apply px-10;
 }
 
 .wp-block-quote cite {
-  @apply p-10;
+  @apply px-10;
+  @apply text-sm;
+  @apply text-slate-600;
 }
 
 /* List Block */

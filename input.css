@@ -5,6 +5,10 @@ TODO: I have to minify the final CSS output.
 
 @import "./gutenberg.css";
 
+#MathJax_Message {
+	display: none;
+}
+
 .main-nav {
   @apply mt-4;
   .menu-item {

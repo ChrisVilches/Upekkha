@@ -4,19 +4,69 @@ class ThemeUtil
 {
   static function has_prev_page()
   {
-    global $wp_query;
-    return $wp_query->get('paged') > 1;
+    $current_page = max(1, get_query_var('paged'));
+    return $current_page > 1;
   }
 
   static function has_next_page()
   {
     global $wp_query;
-    return $wp_query->get('paged') != $wp_query->max_num_pages;
+    $current_page = max(1, get_query_var('paged'));
+    return $current_page < $wp_query->max_num_pages;
+  }
+
+  static function get_search_condition()
+  {
+    $queried_object = get_queried_object();
+
+    if (isset($queried_object->taxonomy)) {
+      $taxonomy_name = "Search";
+      if ($taxonomy = get_taxonomy($queried_object->taxonomy)) {
+        $taxonomy_name = $taxonomy->labels->singular_name;
+      }
+
+      return array("taxonomy" => $taxonomy_name, "value" => $queried_object->name);
+    }
+
+    return null;
   }
 }
 
 class CustomTheme
 {
+  static $social_sites = array(
+    "facebook" => array(
+      "label" => "Facebook",
+      "fa-icon" => "facebook",
+      "class" => "hover:text-blue-500"
+    ),
+    "github" => array(
+      "label" => "Github",
+      "fa-icon" => "github",
+      "class" => "hover:text-white"
+    ),
+    "x" => array(
+      "label" => "X (Twitter)",
+      "fa-icon" => "x-twitter",
+      "class" => "hover:text-white"
+    ),
+    "youtube" => array(
+      "label" => "YouTube",
+      "fa-icon" => "youtube",
+      "class" => "hover:text-red-500"
+    ),
+    "linkedin" => array(
+      "label" => "LinkedIn",
+      "fa-icon" => "linkedin",
+      "class" => "hover:text-blue-600"
+    ),
+    "line" => array(
+      "label" => "Line",
+      "fa-icon" => "line",
+      "class" => "hover:text-green-500"
+    ),
+  );
+
   static function assets()
   {
     wp_register_style("google-font", "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700", array(), false, 'all');
@@ -78,10 +128,35 @@ class CustomTheme
 
     return new WP_Query($args);
   }
+
+
+  static function add_customizer($wp_customize)
+  {
+    // Add a custom section
+    $wp_customize->add_section('theme-options', array(
+      'title'      => 'Theme Options',
+      'priority'   => 30,
+    ));
+
+    $social_sites = CustomTheme::$social_sites;
+
+    foreach ($social_sites as $site => $data) {
+      $wp_customize->add_setting('social-sites-' . $site, array(
+        'section' => 'theme-options',
+        'default'    => '',
+        'transport'  => 'refresh',
+      ));
+      $wp_customize->add_control('social-sites-' . $site, array(
+        'label' => $data['label'],
+        'section' => 'theme-options'
+      ));
+    }
+  }
 }
 
 // TODO: Add configurations (SNS links, etc).
 
+add_action('customize_register', "CustomTheme::add_customizer");
 add_filter('template_include', "CustomTheme::add_before_after_main_tag");
 add_action("after_setup_theme", "CustomTheme::add_menus");
 add_action("after_setup_theme", "CustomTheme::theme_supports");

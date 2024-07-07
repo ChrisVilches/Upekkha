@@ -16,12 +16,12 @@
         ?>
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
               <a href="<?= the_permalink() ?>" class="flex justify-center items-center h-full absolute w-full bg-white">
-                <? if (has_post_thumbnail()) : ?>
-                  <img src="http://my-theme.local/wp-content/uploads/2024/07/potito.jpg" class="absolute opacity-70">
-                <? endif ?>
-                <p class="font-bold text-lg text-black hover:text-black">
+                <p class="font-bold text-lg text-black hover:text-black z-50">
                   <? the_title() ?>
                 </p>
+                <? if (has_post_thumbnail()) : ?>
+                  <img src="<?= the_post_thumbnail_url() ?>" class="absolute opacity-20 w-full">
+                <? endif ?>
               </a>
             </div>
         <?

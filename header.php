@@ -36,13 +36,18 @@
       </div>
     </div>
 
-    <div class="hidden md:flex space-x-4 mt-8 justify-center">
+    <div class="hidden md:flex space-x-4 mt-8 justify-center mb-4">
       <? wp_nav_menu(array('theme_location' => 'main-menu')) ?>
 
       <button class="p-2 text-gray-300 hover:text-gray-100 duration-200 transition-colors" data-open-search-modal>
         <span class="sr-only">Search</span>
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
+    </div>
+
+    <div>
+      <? get_template_part('./partials/icons') ?>
+    </div>
   </nav>
 
   <? get_search_form() ?>

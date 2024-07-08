@@ -1,4 +1,4 @@
-<header class="bg-slate-700 px-4 pb-4">
+<header class="bg-slate-700 px-4 pb-6">
   <div class="block md:flex flex-col items-center">
 
     <div class="md:hidden flex space-x-4 justify-end items-center pt-2">
@@ -13,9 +13,11 @@
       </button>
     </div>
 
-    <div class="flex space-x-4 md:space-x-0 items-center mt-10 md:mt-14">
+    <!-- TODO: (mobile) Maybe the icon would look better below the title.
+               I haven't tried it yet because my blog has no logo yet. -->
+    <div class="flex space-x-4 md:space-x-0 items-center pt-4 md:pt-14">
       <? if (has_custom_logo()) : ?>
-        <div class="sm:block md:hidden size-16 bg-red-500 flex items-center">
+        <div class="sm:block md:hidden size-16 flex items-center">
           <? the_custom_logo() ?>
         </div>
       <? endif ?>

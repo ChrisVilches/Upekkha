@@ -7,13 +7,13 @@
   <? wp_head() ?>
 </head>
 
-<body class="md:container md:mt-16 flex flex-col h-screen bg-slate-200">
+<body class="md:container md:my-16 bg-slate-200">
   <? wp_body_open() ?>
-  <div class="mb-4">
+  <div>
     <? get_header() ?>
 
     <? # TODO: Add this to the left sidebar menu= get_sidebar() 
     ?>
   </div>
 
-  <main class="flex-grow bg-white py-10 mb-4 px-0">
+  <main class="flex-grow bg-white my-8 py-10">

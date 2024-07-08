@@ -1,6 +1,6 @@
 </main>
 
-<footer class="md:pb-16">
+<footer>
   <? get_footer() ?>
 </footer>
 </body>

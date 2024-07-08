@@ -7,7 +7,7 @@
   <? wp_head() ?>
 </head>
 
-<body class="md:container md:my-16 bg-slate-100">
+<body class="md:container md:my-16 bg-slate-200">
   <? wp_body_open() ?>
   <div>
     <? get_header() ?>

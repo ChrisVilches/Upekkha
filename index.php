@@ -5,7 +5,7 @@ $filter = ThemeUtil::get_filter_condition();
 
 <div class="px-4 md:px-10">
   <? if ($search_query || $filter) : ?>
-    <div class="mb-10 bg-slate-100 border-[1px] p-4">
+    <div class="mb-10 bg-slate-200 border-slate-600 border-[1px] p-4">
       <? if ($search_query) : ?>
         <div class="text-lg leading-9">
           <span class="font-bold">Search results for:</span> <?= $search_query ?>

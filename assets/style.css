@@ -2966,6 +2966,11 @@ img.custom-logo {
     padding-right: 10rem;
   }
 
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .md\:pt-14 {
     padding-top: 3.5rem;
   }

@@ -2801,6 +2801,14 @@ img.custom-logo {
   .md\:pt-14 {
     padding-top: 3.5rem;
   }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
+  .md\:text-start {
+    text-align: start;
+  }
 }
 
 @media (min-width: 1200px) {

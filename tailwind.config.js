@@ -13,9 +13,9 @@ module.exports = {
     screens: {
       // TODO: Should this be with "padding" instead??
       'sm': '640px',
-      'md': '748px',
-      'lg': '784px',
-      'xl': '1000px'
+      'md': '850px',
+      'lg': '1000px',
+      'xl': '1200px'
       // 'sm': '640px',
       // 'md': '768px',
       // 'lg': '1024px',

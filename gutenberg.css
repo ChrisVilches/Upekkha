@@ -26,6 +26,7 @@ h3.wp-block-heading, h4.wp-block-heading {
 
 /* Image Block */
 .wp-block-image {
+  @apply mb-10;
 }
 
 .wp-block-image img {

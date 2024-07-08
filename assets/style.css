@@ -1033,21 +1033,21 @@ input:checked + .toggle-bg {
   }
 }
 
-@media (min-width: 748px) {
+@media (min-width: 850px) {
   .container {
-    max-width: 748px;
-  }
-}
-
-@media (min-width: 784px) {
-  .container {
-    max-width: 784px;
+    max-width: 850px;
   }
 }
 
 @media (min-width: 1000px) {
   .container {
     max-width: 1000px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
   }
 }
 
@@ -1226,6 +1226,10 @@ input:checked + .toggle-bg {
   margin-top: 2rem;
 }
 
+.mt-40 {
+  margin-top: 10rem;
+}
+
 .block {
   display: block;
 }
@@ -1324,6 +1328,10 @@ input:checked + .toggle-bg {
   width: 50%;
 }
 
+.w-1\/4 {
+  width: 25%;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -1364,12 +1372,20 @@ input:checked + .toggle-bg {
   flex-shrink: 1;
 }
 
+.shrink-0 {
+  flex-shrink: 0;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
 
 .grow {
   flex-grow: 1;
+}
+
+.grow-0 {
+  flex-grow: 0;
 }
 
 .-translate-x-1\/2 {
@@ -1499,6 +1515,14 @@ input:checked + .toggle-bg {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.place-self-end {
+  place-self: end;
+}
+
+.self-end {
+  align-self: flex-end;
 }
 
 .overflow-hidden {
@@ -1693,6 +1717,21 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 213 213 / var(--tw-bg-opacity));
+}
+
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 131 248 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 82 82 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1778,12 +1817,37 @@ input:checked + .toggle-bg {
   padding-bottom: 1rem;
 }
 
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .pb-20 {
   padding-bottom: 5rem;
 }
 
 .pt-2 {
   padding-top: 0.5rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pt-40 {
+  padding-top: 10rem;
 }
 
 .text-center {
@@ -2037,6 +2101,7 @@ h3.wp-block-heading, h4.wp-block-heading {
 /* Image Block */
 
 .wp-block-image {
+  margin-bottom: 2.5rem;
 }
 
 .wp-block-image img {
@@ -2312,7 +2377,7 @@ h3.wp-block-heading, h4.wp-block-heading {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
-@media (min-width: 748px) {
+@media (min-width: 850px) {
   .main-nav .menu {
     display: inline;
   }
@@ -2359,6 +2424,19 @@ img.custom-logo {
   line-height: 2.25rem;
 }
 
+.content-container a {
+  --tw-text-opacity: 1;
+  color: rgb(28 100 242 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.content-container a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(118 169 250 / var(--tw-text-opacity));
+}
+
 .content-container ul {
   margin-left: 2.5rem;
   margin-bottom: 2.5rem;
@@ -2371,6 +2449,10 @@ img.custom-logo {
 }
 
 .content-container .MathJax_Display {
+  /* TODO: For some reason, this seems to be adding a vertical scroll 
+             Check the text in the FFT article that says "For instance, let's say our sequence"
+             and then check the mathjax widget below that.
+    */
   overflow-x: auto;
 }
 
@@ -2385,7 +2467,7 @@ img.custom-logo {
   border-radius: 10px;
 }
 
-@media (min-width: 748px) {
+@media (min-width: 850px) {
   .md\:container {
     width: 100%;
     margin-right: auto;
@@ -2398,21 +2480,21 @@ img.custom-logo {
     }
   }
 
-  @media (min-width: 748px) {
+  @media (min-width: 850px) {
     .md\:container {
-      max-width: 748px;
-    }
-  }
-
-  @media (min-width: 784px) {
-    .md\:container {
-      max-width: 784px;
+      max-width: 850px;
     }
   }
 
   @media (min-width: 1000px) {
     .md\:container {
       max-width: 1000px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .md\:container {
+      max-width: 1200px;
     }
   }
 }
@@ -2684,23 +2766,27 @@ img.custom-logo {
     display: flex;
   }
 
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .sm\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 }
 
-@media (min-width: 748px) {
+@media (min-width: 850px) {
   .md\:inset-0 {
     inset: 0px;
   }
 
   .md\:mt-16 {
     margin-top: 4rem;
+  }
+
+  .md\:mt-40 {
+    margin-top: 10rem;
+  }
+
+  .md\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .md\:block {
@@ -2731,10 +2817,6 @@ img.custom-logo {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .md\:p-5 {
     padding: 1.25rem;
   }
@@ -2746,6 +2828,12 @@ img.custom-logo {
 
   .md\:pb-16 {
     padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

@@ -1,6 +1,6 @@
 <? if (have_posts()) : while (have_posts()) : the_post() ?>
-    <article class="content-container">
-      <h1 class="px-10 text-3xl mb-10 font-bold">
+    <article>
+      <h1 class="px-10 text-3xl mb-10 font-bold text-center">
         <? the_title() ?>
       </h1>
 
@@ -27,21 +27,16 @@
       <? endif ?>
 
       <div class="px-10 pb-20">
-        <? the_content() ?>
-
-        <? if ($tags = get_the_tags()) : ?>
-          <? foreach ($tags as $tag) : ?>
-            <a href="<?= get_tag_link($tag) ?>" class="inline-block rounded-md p-2 text-slate-600 hover:text-slate-800">
-              <i class="fa fa-hashtag mr-1.5"></i><?= $tag->name ?>
-            </a>
-          <? endforeach ?>
-        <? endif ?>
+        <div class="content-container">
+          <? the_content() ?>
+        </div>
+        <? get_template_part('./partials/post-tags') ?>
       </div>
 
       <? global $authordata; ?>
-      <? get_template_part('./partials/prev_next_post') ?>
+      <? get_template_part('./partials/prev-next-post') ?>
       <div class="px-10 my-10">
-        <? get_template_part('./partials/about_author', null, array("author" => $authordata)) ?>
+        <? get_template_part('./partials/about-author', null, array("author" => $authordata)) ?>
       </div>
       <? get_template_part('./partials/recommended') ?>
     </article>

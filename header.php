@@ -1,25 +1,27 @@
-<header class="bg-slate-700 py-12 px-4">
+<header class="bg-slate-700 px-4 pb-4">
   <div class="block md:flex flex-col items-center">
 
-    <div class="flex space-x-4 justify-center items-center">
+    <div class="md:hidden flex space-x-4 justify-end items-center pt-2">
+      <button class="p-2 text-gray-300 hover:text-gray-100 duration-200 transition-colors" data-open-search-modal>
+        <span class="sr-only">Search</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <button data-collapse-toggle="navbar-menu" type="button" class="p-2 text-gray-300 hover:text-gray-100 duration-200 transition-colors" aria-controls="navbar-menu" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="flex space-x-4 items-center">
       <? if (has_custom_logo()) : ?>
         <div class="sm:block md:hidden size-16">
           <? the_custom_logo() ?>
         </div>
       <? endif ?>
-      <a class="grow text-3xl font-bold uppercase text-gray-300 hover:text-gray-100 duration-200 transition-colors" href="<?= home_url() ?>">
+      <a class="grow md:mt-10 text-3xl font-bold uppercase text-gray-300 hover:text-gray-100 duration-200 transition-colors" href="<?= home_url() ?>">
         <? bloginfo('name') ?>
       </a>
-
-      <button class="p-2 md:hidden text-gray-300 hover:text-gray-100 duration-200 transition-colors" data-open-search-modal>
-        <span class="sr-only">Search</span>
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-
-      <button data-collapse-toggle="navbar-menu" type="button" class="p-2 md:hidden text-gray-300 hover:text-gray-100 duration-200 transition-colors" aria-controls="navbar-menu" aria-expanded="false">
-        <span class="sr-only">Menu</span>
-        <i class="fa fa-bars"></i>
-      </button>
     </div>
 
     <? if (has_custom_logo()) : ?>
@@ -30,8 +32,9 @@
   </div>
 
   <nav class="main-nav">
+    <!-- TODO: For mobile, should the menu toggle button be inside the <nav>??? -->
     <div class="md:hidden">
-      <div class="hidden" id="navbar-menu">
+      <div class="hidden mb-10" id="navbar-menu">
         <? wp_nav_menu(array('theme_location' => 'responsive-menu')) ?>
       </div>
     </div>

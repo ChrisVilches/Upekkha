@@ -65,6 +65,15 @@ img.custom-logo {
     @apply mb-10;
     @apply leading-9;
   }
+  
+  a {
+    @apply text-blue-600;
+    @apply transition-colors;
+    @apply duration-300;
+    &:hover {
+      @apply text-blue-400;
+    }
+  }
 
   ul {
     @apply ml-10;
@@ -78,6 +87,10 @@ img.custom-logo {
   }
 
   .MathJax_Display {
+    /* TODO: For some reason, this seems to be adding a vertical scroll 
+             Check the text in the FFT article that says "For instance, let's say our sequence"
+             and then check the mathjax widget below that.
+    */
     @apply overflow-x-auto;
   }
 }

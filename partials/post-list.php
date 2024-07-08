@@ -1,4 +1,4 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
   <? if (have_posts()) : ?>
     <? while (have_posts()) : the_post() ?>
       <a href="<? the_permalink() ?>" class="flex flex-col border-[1px] border-slate-300 hover:border-slate-600 text-black hover:bg-slate-200 duration-700 transition-colors p-8">

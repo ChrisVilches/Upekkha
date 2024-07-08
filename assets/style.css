@@ -2588,7 +2588,7 @@ img.custom-logo {
   transition-duration: 150ms;
 }
 
-.sidebar-drawer .wp-block-group, .sidebar-drawer .menu-sidebar-container {
+.sidebar-drawer .wp-block-group, .sidebar-drawer .sidebar-responsive-menu-container {
   margin-bottom: 2.5rem;
 }
 

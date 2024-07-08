@@ -120,7 +120,7 @@ img.custom-logo {
     @apply duration-300;
     @apply transition-colors;
   }
-  .wp-block-group, .menu-sidebar-container {
+  .wp-block-group, .sidebar-responsive-menu-container {
     @apply mb-10;
   }
 

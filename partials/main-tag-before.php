@@ -11,9 +11,6 @@
   <? wp_body_open() ?>
   <div>
     <? get_header() ?>
-
-    <? # TODO: Add this to the left sidebar menu= get_sidebar() 
-    ?>
   </div>
 
   <main class="flex-grow bg-white my-8 py-10">

@@ -154,8 +154,25 @@ class CustomTheme
       ));
     }
   }
+
+  static function add_custom_sidebar()
+  {
+    register_sidebar(
+      array(
+        'id' => 'sidebar-widget',
+        'name' => 'Sidebar Widget',
+        'description' => 'Customizable widget that gets displayed in the drawer sidebar',
+        // TODO: What's all of this?
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="widget-title-holder"><h3 class="widget-title">',
+        'after_title' => '</h3></div>'
+      )
+    );
+  }
 }
 
+add_action('widgets_init', 'CustomTheme::add_custom_sidebar');
 add_action('customize_register', "CustomTheme::add_customizer");
 add_filter('template_include', "CustomTheme::add_before_after_main_tag");
 add_action("after_setup_theme", "CustomTheme::add_menus");

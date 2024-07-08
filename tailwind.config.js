@@ -23,5 +23,5 @@ module.exports = {
       // '2xl': '1536px'
     }
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin'), require('tailwind-scrollbar')({ nocompatible: true, preferredStrategy: 'pseudoelements' })],
 }

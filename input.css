@@ -69,9 +69,7 @@ img.custom-logo {
     @apply text-blue-600;
     @apply transition-colors;
     @apply duration-300;
-    &:hover {
-      @apply text-blue-400;
-    }
+    @apply hover:text-blue-400;
   }
 
   ul {
@@ -102,4 +100,44 @@ img.custom-logo {
     padding-bottom: 10px;
   }
   border-radius: 10px;
+}
+
+/* TODO: This styling won't work for all widgets.
+        For tag clouds, it breaks lines (it should all be in the same line)
+        For categories with post count, it doesn't show the count in the same line.
+        Etc.
+*/
+.sidebar-drawer {
+  @apply bg-slate-950;
+  @apply p-10;
+  @apply text-slate-200;
+  a {
+    @apply w-full;
+    @apply inline-block;
+    @apply hover:bg-slate-900;
+    @apply p-2;
+    @apply rounded-md;
+    @apply duration-300;
+    @apply transition-colors;
+  }
+  .wp-block-group, .menu-sidebar-container {
+    @apply mb-10;
+  }
+
+  .menu-sidebar-container {
+    .menu-item {
+      @apply leading-9;
+    }
+  }
+
+  
+  .widget_block {
+    .wp-block-heading {
+      @apply mb-2;
+    }
+
+    p, ul {
+      @apply leading-9;
+    }
+  }
 }

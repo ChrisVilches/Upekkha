@@ -4,7 +4,6 @@ $filter = ThemeUtil::get_filter_condition();
 ?>
 
 <div class="px-10">
-
   <? if ($search_query || $filter) : ?>
     <div class="mb-10 bg-slate-100 border-[1px] p-4">
       <? if ($search_query) : ?>

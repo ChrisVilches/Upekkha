@@ -71,10 +71,7 @@ class CustomTheme
   {
     $theme_ver = wp_get_theme()->get('Version');
 
-    // TODO: Am I even using these fonts????
-    wp_register_style("google-font", "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700", array(), false, 'all');
-    wp_register_style("google-font-2", "https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap", array(), false, 'all');
-    wp_enqueue_style("styles", get_template_directory_uri() . "/assets/style.css", array("google-font"), $theme_ver);
+    wp_enqueue_style("styles", get_template_directory_uri() . "/assets/style.css", array(), $theme_ver);
     wp_enqueue_style("font-awesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css", array(), "6.5.2", "all");
     wp_enqueue_script("js", get_template_directory_uri() . "/assets/script.js", array(), $theme_ver);
   }

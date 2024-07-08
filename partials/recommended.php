@@ -17,7 +17,7 @@
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
               <a href="<?= the_permalink() ?>" class="group flex justify-center items-center h-full absolute w-full bg-white">
                 <div class="w-3/4 md:w-1/2 flex justify-center items-center h-full">
-                  <p class="font-bold text-lg text-slate-200 group-hover:text-slate-100 duration-300 transition-colors z-50 text-center bg-slate-700/80 p-2 rounded-md">
+                  <p class="font-bold text-lg text-slate-200 group-hover:text-slate-100 duration-300 transition-colors z-50 text-center bg-slate-800/80 p-2 rounded-md">
                     <? the_title() ?>
                   </p>
                 </div>
@@ -39,13 +39,13 @@
         <? endforeach ?>
       </div>
 
-      <button data-carousel-prev type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hover:bg-slate-500/50 transition-colors duration-400">
+      <button data-carousel-prev type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-slate-100 bg-slate-400/30 hover:bg-slate-500/50 transition-colors duration-400">
         <span class="inline-flex items-center justify-center w-10 h-10">
           <i class="fa-solid fa-chevron-left"></i>
           <span class="sr-only">Previous</span>
         </span>
       </button>
-      <button data-carousel-next type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hover:bg-slate-500/50 transition-colors duration-400">
+      <button data-carousel-next type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-slate-100 bg-slate-400/30 hover:bg-slate-500/50 transition-colors duration-400">
         <span class="inline-flex items-center justify-center w-10 h-10">
           <i class="fa-solid fa-chevron-right"></i>
           <span class="sr-only">Next</span>

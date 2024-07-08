@@ -34,7 +34,7 @@
   </div>
 
   <nav>
-    <div id="sidebar-drawer" class="scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 left-0 z-40 h-full p-4 overflow-y-auto transition-transform -translate-x-full md:w-3/4 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
+    <div id="sidebar-drawer" class="scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 left-0 z-40 h-full p-4 overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
       <div class="md:hidden sidebar-responsive-menu-container">
         <? wp_nav_menu(array('theme_location' => 'responsive-menu')) ?>
       </div>

@@ -2562,6 +2562,11 @@ img.custom-logo {
         Etc.
 */
 
+/* TODO: In order to make the menu items have full width, you have to select stretch-items
+         in WP widget editor. It's not very elegant. Maybe I should force it using CSS,
+         but perhaps the user wants to not stretch them, so maybe it's useful to have the
+         option. */
+
 .sidebar-drawer {
   --tw-bg-opacity: 1;
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
@@ -2939,10 +2944,6 @@ img.custom-logo {
     width: 50%;
   }
 
-  .md\:w-3\/4 {
-    width: 75%;
-  }
-
   .md\:grow-0 {
     flex-grow: 0;
   }
@@ -2961,14 +2962,14 @@ img.custom-logo {
     padding: 1.25rem;
   }
 
-  .md\:px-40 {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .md\:px-40 {
+    padding-left: 10rem;
+    padding-right: 10rem;
   }
 
   .md\:pt-14 {
@@ -2977,6 +2978,12 @@ img.custom-logo {
 
   .md\:text-start {
     text-align: start;
+  }
+}
+
+@media (min-width: 1000px) {
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 }
 

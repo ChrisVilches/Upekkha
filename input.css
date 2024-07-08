@@ -107,6 +107,10 @@ img.custom-logo {
         For categories with post count, it doesn't show the count in the same line.
         Etc.
 */
+/* TODO: In order to make the menu items have full width, you have to select stretch-items
+         in WP widget editor. It's not very elegant. Maybe I should force it using CSS,
+         but perhaps the user wants to not stretch them, so maybe it's useful to have the
+         option. */
 .sidebar-drawer {
   @apply bg-slate-950;
   @apply p-10;
@@ -129,7 +133,6 @@ img.custom-logo {
       @apply leading-9;
     }
   }
-
   
   .widget_block {
     .wp-block-heading {

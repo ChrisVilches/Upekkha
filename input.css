@@ -83,6 +83,7 @@ img.custom-logo {
 
   li {
     @apply pl-1;
+    @apply mb-2;
   }
 
   .MathJax_Display {

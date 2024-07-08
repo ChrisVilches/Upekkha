@@ -5,14 +5,14 @@
       </h1>
 
       <div class="px-10 text-slate-600 mb-10">
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 justify-center">
           <i class="fa-regular fa-clock text-sm"></i>
           <div>
             <?= get_the_date() ?>
           </div>
         </div>
 
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-2 justify-center">
           <i class="fa-regular fa-user text-sm"></i>
           <div>
             <?= get_the_author() ?>

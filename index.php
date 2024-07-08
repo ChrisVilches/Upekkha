@@ -1,8 +1,34 @@
-<div class="px-4">
-  <? if ($search = ThemeUtil::get_search_condition()) : ?>
-    <div class="mb-10 text-lg">
-      <span class="font-bold"><?= $search['taxonomy'] ?>:</span> <?= $search['value'] ?>
+<?
+$search_query = get_search_query();
+$filter = ThemeUtil::get_filter_condition();
+?>
+
+<div class="px-10">
+
+  <? if ($search_query || $filter) : ?>
+    <div class="mb-10 bg-slate-100 border-[1px] p-4">
+      <? if ($search_query) : ?>
+        <div class="text-lg leading-9">
+          <span class="font-bold">Search results for:</span> <?= $search_query ?>
+        </div>
+      <? endif ?>
+
+      <? if ($filter) : ?>
+        <div class="text-lg leading-9">
+          <span class="font-bold"><?= $filter['taxonomy'] ?>:</span> <?= $filter['value'] ?>
+        </div>
+      <? endif ?>
     </div>
+
+    <? if ($search_query && !have_posts()) : ?>
+      <p>
+        Nothing found. Please try again with some different keywords.
+      </p>
+
+      <div class="mt-10 w-full md:w-1/2">
+        <? get_template_part('./partials/search-form', null, array("close-btn" => false)) ?>
+      </div>
+    <? endif ?>
   <? endif ?>
 
   <? get_template_part("./partials/post-list") ?>

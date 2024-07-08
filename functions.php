@@ -15,7 +15,7 @@ class ThemeUtil
     return $current_page < $wp_query->max_num_pages;
   }
 
-  static function get_search_condition()
+  static function get_filter_condition()
   {
     $queried_object = get_queried_object();
 

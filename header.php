@@ -13,13 +13,13 @@
       </button>
     </div>
 
-    <div class="flex space-x-4 items-center">
+    <div class="flex space-x-4 md:space-x-0 items-center mt-10 md:mt-14">
       <? if (has_custom_logo()) : ?>
-        <div class="sm:block md:hidden size-16">
+        <div class="sm:block md:hidden size-16 bg-red-500 flex items-center">
           <? the_custom_logo() ?>
         </div>
       <? endif ?>
-      <a class="grow md:mt-10 text-3xl font-bold uppercase text-gray-300 hover:text-gray-100 duration-200 transition-colors" href="<?= home_url() ?>">
+      <a class="grow text-3xl font-bold uppercase text-gray-300 hover:text-gray-100 duration-200 transition-colors" href="<?= home_url() ?>">
         <? bloginfo('name') ?>
       </a>
     </div>

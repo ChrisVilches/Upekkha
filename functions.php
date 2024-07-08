@@ -71,6 +71,7 @@ class CustomTheme
   {
     $theme_ver = wp_get_theme()->get('Version');
 
+    // TODO: Am I even using these fonts????
     wp_register_style("google-font", "https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700", array(), false, 'all');
     wp_register_style("google-font-2", "https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap", array(), false, 'all');
     wp_register_style("bootstrap", "https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css", array(), "5.1.0", 'all');
@@ -155,8 +156,6 @@ class CustomTheme
     }
   }
 }
-
-// TODO: Add configurations (SNS links, etc).
 
 add_action('customize_register', "CustomTheme::add_customizer");
 add_filter('template_include', "CustomTheme::add_before_after_main_tag");

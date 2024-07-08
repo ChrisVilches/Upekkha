@@ -35,6 +35,7 @@ function initSearchModal () {
 
 function initRecommendedCarousel() {
   const element = document.getElementById('recommended-carousel')
+  if (!element) return
 
   const items = $.map($("[data-carousel-item]"), (el, position) => {
     return { position, el }

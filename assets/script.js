@@ -13506,6 +13506,7 @@
   }
   function initRecommendedCarousel() {
     const element = document.getElementById("recommended-carousel");
+    if (!element) return;
     const items = import_jquery.default.map((0, import_jquery.default)("[data-carousel-item]"), (el, position) => {
       return { position, el };
     });

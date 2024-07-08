@@ -3,9 +3,19 @@ TODO: I have to minify the final CSS output.
 */
 
 @import "./gutenberg.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 #MathJax_Message {
 	display: none;
+}
+
+body {
+  @apply font-roboto;
+}
+
+h1, h2, h3, h4 {
+  @apply font-rajdhani;
 }
 
 .main-nav {
@@ -115,6 +125,14 @@ img.custom-logo {
   @apply bg-slate-950;
   @apply p-10;
   @apply text-slate-200;
+  
+  h1, h2, h3, h4 {
+    @apply text-yellow-200;
+    @apply text-lg;
+  }
+
+  @apply text-sm;
+  
   a {
     @apply w-full;
     @apply inline-block;

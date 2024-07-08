@@ -21,7 +21,7 @@
           <? the_custom_logo() ?>
         </div>
       <? endif ?>
-      <a class="grow text-3xl font-bold uppercase text-gray-300 hover:text-gray-100 duration-200 transition-colors" href="<?= home_url() ?>">
+      <a class="grow font-rajdhani text-3xl font-bold uppercase text-gray-300 hover:text-gray-100 duration-200 transition-colors" href="<?= home_url() ?>">
         <? bloginfo('name') ?>
       </a>
     </div>

@@ -60,16 +60,25 @@ img.custom-logo {
   @apply rounded-full;
 }
 
-.content-container { 
+.content-container {
   p {
     @apply mb-10;
     @apply leading-9;
   }
 
   ul {
+    @apply ml-10;
     @apply mb-10;
     @apply list-disc;
-    @apply list-inside;
+    @apply list-outside;
+  }
+
+  li {
+    @apply pl-1;
+  }
+
+  .MathJax_Display {
+    @apply overflow-x-auto;
   }
 }
 

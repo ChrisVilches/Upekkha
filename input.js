@@ -50,8 +50,9 @@ function initRecommendedCarousel() {
     interval: 3000,
     indicators: {
         items: indicators,
-        activeClasses: 'bg-slate-600',
-        inactiveClasses: 'bg-slate-200',
+        // NOTE: Indicator style can be set here.
+        // activeClasses: 'bg-slate-600',
+        // inactiveClasses: 'bg-slate-200',
     }
   };
 

@@ -15,15 +15,14 @@
 
         ?>
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <a href="<?= the_permalink() ?>" class="flex justify-center items-center h-full absolute w-full bg-white">
+              <a href="<?= the_permalink() ?>" class="group flex justify-center items-center h-full absolute w-full bg-white">
                 <div class="w-3/4 md:w-1/2 flex justify-center items-center h-full">
-
-                  <p class="font-bold text-lg text-black hover:text-black z-50 text-center">
+                  <p class="font-bold text-lg text-slate-200 group-hover:text-slate-100 duration-300 transition-colors z-50 text-center bg-slate-700/80 p-2 rounded-md">
                     <? the_title() ?>
                   </p>
                 </div>
                 <? if (has_post_thumbnail()) : ?>
-                  <img src="<?= the_post_thumbnail_url() ?>" class="absolute opacity-20 w-full">
+                  <img src="<?= the_post_thumbnail_url() ?>" class="absolute opacity-80 group-hover:opacity-70 duration-300 transition-opacity w-full">
                 <? endif ?>
               </a>
             </div>

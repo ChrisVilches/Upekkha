@@ -13517,9 +13517,10 @@
       defaultPosition: 0,
       interval: 3e3,
       indicators: {
-        items: indicators,
-        activeClasses: "bg-slate-600",
-        inactiveClasses: "bg-slate-200"
+        items: indicators
+        // NOTE: Indicator style can be set here.
+        // activeClasses: 'bg-slate-600',
+        // inactiveClasses: 'bg-slate-200',
       }
     };
     const instanceOptions = {

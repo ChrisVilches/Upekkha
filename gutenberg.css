@@ -15,7 +15,8 @@ h2.wp-block-heading {
   @apply text-xl;
 }
 
-h3.wp-block-heading, h4.wp-block-heading {
+h3.wp-block-heading,
+h4.wp-block-heading {
   @apply text-lg;
 }
 
@@ -56,8 +57,9 @@ h3.wp-block-heading, h4.wp-block-heading {
 }
 
 .wp-block-quote::before {
-  font-family: "Font Awesome 6 Free";
+  font-family: "Font Awesome 6 Free", sans-serif;
   content: "\f10d";
+
   @apply font-bold;
   @apply text-2xl;
   @apply absolute;
@@ -92,13 +94,6 @@ h3.wp-block-heading, h4.wp-block-heading {
 }
 
 .wp-block-media-text__content {
-}
-
-/* Columns Block */
-.wp-block-columns {
-}
-
-.wp-block-column {
 }
 
 /* Button Block */

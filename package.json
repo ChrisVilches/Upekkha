@@ -9,7 +9,7 @@
     "js:prod": "NODE_ENV=production esbuild input.js --bundle --outfile=dist/script.js --minify",
     "js:dev": "NODE_ENV=development esbuild input.js --bundle --outfile=dist/script.js --watch",
     "build:prod": "npm run css:prod && npm run js:prod",
-    "lint": "standard --fix"
+    "lint": "prettier --write '**/*.{js,css}'"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +19,7 @@
     "cssnano": "^7.0.4",
     "esbuild": "0.23.0",
     "postcss": "^8.4.39",
-    "standard": "^17.1.0",
+    "prettier": "3.3.2",
     "tailwind-scrollbar": "^3.1.0",
     "tailwindcss": "^3.4.4"
   },

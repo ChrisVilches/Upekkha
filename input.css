@@ -1,25 +1,26 @@
-/*
-TODO: I have to minify the final CSS output.
-*/
-
-@import "./gutenberg.css";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("./gutenberg.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /* TODO: This font is actually rather hard to read, specially when uppercased */
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
 
 body {
   @apply font-roboto;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   @apply font-rajdhani;
 }
 
 .main-nav {
   @apply mt-4;
+
   .menu-item {
-    a, button {
+    a,
+    button {
       @apply block;
       @apply text-slate-200;
       @apply hover:text-slate-100;
@@ -30,7 +31,7 @@ h1, h2, h3, h4 {
       @apply duration-500;
     }
   }
-  
+
   .current-menu-item a {
     @apply text-slate-100;
     @apply font-bold;
@@ -44,7 +45,9 @@ h1, h2, h3, h4 {
 
     .menu-item {
       @apply inline-block;
-      a, button {
+
+      a,
+      button {
         @apply text-slate-200;
         @apply hover:text-slate-100;
         @apply hover:bg-slate-800;
@@ -54,13 +57,13 @@ h1, h2, h3, h4 {
         @apply duration-500;
       }
     }
-    
+
     .current-menu-item a {
       @apply text-slate-100;
       @apply font-bold;
       @apply bg-slate-800;
     }
-  }    
+  }
 }
 
 img.custom-logo {
@@ -69,7 +72,17 @@ img.custom-logo {
 
 .content-container {
   /* Default margin-bottom for all blocks. */
-  p, ul, ol, div, a, figure, blockquote, h1, h2, h3, h4 {
+  p,
+  ul,
+  ol,
+  div,
+  a,
+  figure,
+  blockquote,
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply mb-10;
   }
 
@@ -94,11 +107,12 @@ img.custom-logo {
     @apply rounded-md;
   }
 
-  ul, ol {
+  ul,
+  ol {
     @apply ml-10;
     @apply list-outside;
   }
-  
+
   ul {
     @apply list-disc;
   }
@@ -112,17 +126,20 @@ img.custom-logo {
     @apply ml-0;
     @apply list-inside;
     @apply text-slate-500;
+
     a {
       @apply text-slate-500;
     }
+
     li {
       @apply pl-0;
     }
+
     .footnote-back-link-wrapper {
       @apply ml-2;
     }
-
   }
+
   mjx-container {
     @apply overflow-x-auto;
     @apply overflow-y-clip;
@@ -140,6 +157,7 @@ img.custom-logo {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+
   border-radius: 10px;
 }
 
@@ -148,6 +166,7 @@ img.custom-logo {
         For categories with post count, it doesn't show the count in the same line.
         Etc.
 */
+
 /* TODO: In order to make the menu items have full width, you have to select stretch-items
          in WP widget editor. It's not very elegant. Maybe I should force it using CSS,
          but perhaps the user wants to not stretch them, so maybe it's useful to have the
@@ -156,8 +175,11 @@ img.custom-logo {
   @apply bg-slate-900;
   @apply p-10;
   @apply text-slate-200;
-  
-  h1, h2, h3, h4 {
+
+  h1,
+  h2,
+  h3,
+  h4 {
     @apply border-l-4;
     @apply border-l-yellow-200;
     @apply pl-4;
@@ -166,7 +188,7 @@ img.custom-logo {
   }
 
   @apply text-sm;
-  
+
   a {
     @apply w-full;
     @apply inline-block;
@@ -176,7 +198,9 @@ img.custom-logo {
     @apply duration-300;
     @apply transition-colors;
   }
-  .wp-block-group, .sidebar-responsive-menu-container {
+
+  .wp-block-group,
+  .sidebar-responsive-menu-container {
     @apply mb-10;
   }
 
@@ -185,7 +209,7 @@ img.custom-logo {
       @apply leading-9;
     }
   }
-  
+
   .widget_block {
     .wp-block-heading {
       @apply mb-4;

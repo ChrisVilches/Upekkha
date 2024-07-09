@@ -8,10 +8,6 @@ TODO: I have to minify the final CSS output.
 /* TODO: This font is actually rather hard to read, specially when uppercased */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-#MathJax_Message {
-	display: none;
-}
-
 body {
   @apply font-roboto;
 }
@@ -125,19 +121,16 @@ img.custom-logo {
     .footnote-back-link-wrapper {
       @apply ml-2;
     }
+
+  }
+  mjx-container {
+    @apply overflow-x-auto;
+    @apply overflow-y-clip;
   }
 
   li {
     @apply pl-1;
     @apply mb-2;
-  }
-
-  .MathJax_Display {
-    /* TODO: For some reason, this seems to be adding a vertical scroll 
-             Check the text in the FFT article that says "For instance, let's say our sequence"
-             and then check the mathjax widget below that.
-    */
-    @apply overflow-x-auto;
   }
 }
 

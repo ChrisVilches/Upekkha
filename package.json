@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "css:prod": "NODE_ENV=production tailwindcss --postcss -i ./input.css -o ./dist/style.css",
-    "css:dev": "NODE_ENV=development npm run css:build -- --watch",
+    "css:dev": "NODE_ENV=development tailwindcss --postcss -i ./input.css -o ./dist/style.css --watch",
     "js:prod": "NODE_ENV=production esbuild input.js --bundle --outfile=dist/script.js --minify",
     "js:dev": "NODE_ENV=development esbuild input.js --bundle --outfile=dist/script.js --watch",
     "build:prod": "npm run css:prod && npm run js:prod"

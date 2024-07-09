@@ -111,6 +111,17 @@ img.custom-logo {
     @apply list-decimal;
   }
 
+  ol.footnotes {
+    @apply ml-4;
+    @apply text-slate-400;
+    a {
+      @apply text-slate-400;
+    }
+    .footnote-back-link-wrapper {
+      @apply ml-2;
+    }
+  }
+
   li {
     @apply pl-1;
     @apply mb-2;

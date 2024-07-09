@@ -1,6 +1,4 @@
-import "flowbite"
-import { Modal } from 'flowbite'
-import { Carousel } from 'flowbite'
+import { Modal, Carousel } from 'flowbite'
 import qr from 'qr-encode'
 
 function initSearchModal () {
@@ -14,7 +12,7 @@ function initSearchModal () {
       ev.preventDefault()
     }
   })
-  
+
   // Focus on the search input when the search modal is shown.
   const options = {
     onShow: () => {
@@ -24,23 +22,22 @@ function initSearchModal () {
 
   const searchModal = new Modal(modalElement, options)
 
-  for(const element of document.querySelectorAll('button[data-open-search-modal]')) {
+  for (const element of document.querySelectorAll('button[data-open-search-modal]')) {
     element.addEventListener('click', () => {
       searchModal.show()
     })
   }
-
 }
 
-function initRecommendedCarousel() {
+function initRecommendedCarousel () {
   const element = document.getElementById('recommended-carousel')
   if (!element) return
 
-  const items = Array.from(document.querySelectorAll("[data-carousel-item]")).map((el, position) => {
+  const items = Array.from(document.querySelectorAll('[data-carousel-item]')).map((el, position) => {
     return { position, el }
   })
 
-  const indicators = Array.from(document.querySelectorAll("[data-carousel-indicator]")).map((el, position) => {
+  const indicators = Array.from(document.querySelectorAll('[data-carousel-indicator]')).map((el, position) => {
     return { position, el }
   })
 
@@ -48,45 +45,44 @@ function initRecommendedCarousel() {
     defaultPosition: 0,
     interval: 3000,
     indicators: {
-        items: indicators,
-        // NOTE: Indicator style can be set here.
-        //       Add JS files to Tailwind content in order to write classes here.
-        // activeClasses: 'bg-slate-600',
-        // inactiveClasses: 'bg-slate-200',
+      items: indicators
+      // NOTE: Indicator style can be set here.
+      //       Add JS files to Tailwind content in order to write classes here.
+      // activeClasses: 'bg-slate-600',
+      // inactiveClasses: 'bg-slate-200',
     }
-  };
+  }
 
   const instanceOptions = {
     id: 'recommended-carousel',
     override: true
-  };
+  }
 
-  const carousel = new Carousel(element, items, options, instanceOptions);
-  carousel.cycle();
+  const carousel = new Carousel(element, items, options, instanceOptions)
+  carousel.cycle()
 
   document.querySelector('[data-carousel-prev]').addEventListener('click', carousel.prev.bind(carousel))
   document.querySelector('[data-carousel-next]').addEventListener('click', carousel.next.bind(carousel))
 }
 
-function genQrSingle(selector, container) {
+function genQrSingle (selector, container) {
   const element = container.querySelector(selector)
   const content = element.getAttribute('data-qr-content')
   element.src = qr(content, { type: 6, size: 6, level: 'Q' })
 }
 
-function initLineModalBtns() {
-  for(const element of document.querySelectorAll('[data-role=line-modal-btn]')) {
+function initLineModalBtns () {
+  for (const element of document.querySelectorAll('[data-role=line-modal-btn]')) {
     element.addEventListener('click', () => {
       const modalId = element.getAttribute('data-modal-target')
       const modalElement = document.querySelector(`#${modalId}`)
-      genQrSingle("[data-role=line-qr]", modalElement)
+      genQrSingle('[data-role=line-qr]', modalElement)
     })
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => { 
+document.addEventListener('DOMContentLoaded', () => {
   initSearchModal()
   initRecommendedCarousel()
   initLineModalBtns()
 })
-

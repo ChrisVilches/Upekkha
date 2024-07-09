@@ -13,11 +13,10 @@
     <span class="sr-only">Loading...</span>
   </div>
 
-  <div class="">
-    <? wp_body_open() ?>
-    <div>
-      <? get_header() ?>
-    </div>
+  <? wp_body_open() ?>
+  <div>
+    <? get_header() ?>
+  </div>
 
-    <!-- Must be hidden so that the theme switch doesn't do any color transition. -->
-    <main class="flex-grow bg-white dark:bg-slate-600 dark:text-white my-8 py-10 hidden" id="main-container">
+  <!-- Must be hidden so that the theme switch doesn't do any color transition. -->
+  <main class="flex-grow bg-white dark:bg-slate-600 dark:text-white my-8 py-10 hidden" id="main-container">

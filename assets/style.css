@@ -2201,7 +2201,6 @@ input:checked + .toggle-bg{
 
 .wp-block-heading{
   font-weight: 700;
-  margin-bottom: 2.5rem;
 }
 
 h1.wp-block-heading{
@@ -2227,7 +2226,6 @@ h3.wp-block-heading, h4.wp-block-heading{
 /* Image Block */
 
 .wp-block-image{
-  margin-bottom: 2.5rem;
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(53 66 79 / var(--tw-text-opacity));
@@ -2236,6 +2234,13 @@ h3.wp-block-heading, h4.wp-block-heading{
 }
 
 .wp-block-image img{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* For the WP Mermaid plugin */
+
+.wp-block-wp-mermaid-block svg{
   margin-left: auto;
   margin-right: auto;
 }
@@ -2251,7 +2256,6 @@ h3.wp-block-heading, h4.wp-block-heading{
 /* Quote Block */
 
 .wp-block-quote{
-  margin-bottom: 2.5rem;
   border-left-width: 4px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2562,8 +2566,13 @@ img.custom-logo{
   border-radius: 9999px;
 }
 
-.content-container p{
+/* Default margin-bottom for all blocks. */
+
+.content-container p, .content-container ul, .content-container ol, .content-container div, .content-container a, .content-container figure, .content-container blockquote, .content-container h1, .content-container h2, .content-container h3, .content-container h4{
   margin-bottom: 2.5rem;
+}
+
+.content-container p{
   line-height: 2.25rem;
 }
 
@@ -2582,7 +2591,6 @@ img.custom-logo{
 
 .content-container ul, .content-container ol{
   margin-left: 2.5rem;
-  margin-bottom: 2.5rem;
   list-style-position: outside;
 }
 

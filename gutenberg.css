@@ -5,7 +5,6 @@
 /* Heading Blocks */
 .wp-block-heading {
   @apply font-bold;
-  @apply mb-10;
 }
 
 h1.wp-block-heading {
@@ -26,7 +25,6 @@ h3.wp-block-heading, h4.wp-block-heading {
 
 /* Image Block */
 .wp-block-image {
-  @apply mb-10;
   @apply text-center;
   @apply text-slate-500;
   @apply text-sm;
@@ -34,6 +32,13 @@ h3.wp-block-heading, h4.wp-block-heading {
 
 .wp-block-image img {
   @apply mx-auto;
+}
+
+/* For the WP Mermaid plugin */
+.wp-block-wp-mermaid-block {
+  svg {
+    @apply mx-auto;
+  }
 }
 
 /* Gallery Block */
@@ -45,7 +50,6 @@ h3.wp-block-heading, h4.wp-block-heading {
 
 /* Quote Block */
 .wp-block-quote {
-  @apply mb-10;
   @apply border-l-4;
   @apply px-2;
   @apply border-black;

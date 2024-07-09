@@ -72,11 +72,15 @@ img.custom-logo {
 }
 
 .content-container {
-  p {
+  /* Default margin-bottom for all blocks. */
+  p, ul, ol, div, a, figure, blockquote, h1, h2, h3, h4 {
     @apply mb-10;
+  }
+
+  p {
     @apply leading-9;
   }
-  
+
   a {
     @apply text-blue-600;
     @apply transition-colors;
@@ -86,7 +90,6 @@ img.custom-logo {
 
   ul, ol {
     @apply ml-10;
-    @apply mb-10;
     @apply list-outside;
   }
   

@@ -50,6 +50,7 @@ function initRecommendedCarousel() {
     indicators: {
         items: indicators,
         // NOTE: Indicator style can be set here.
+        //       Add JS files to Tailwind content in order to write classes here.
         // activeClasses: 'bg-slate-600',
         // inactiveClasses: 'bg-slate-200',
     }

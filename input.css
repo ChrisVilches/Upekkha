@@ -188,11 +188,7 @@ img.custom-logo {
   
   .widget_block {
     .wp-block-heading {
-      @apply mb-2;
-    }
-
-    p, ul {
-      @apply leading-9;
+      @apply mb-4;
     }
   }
 }

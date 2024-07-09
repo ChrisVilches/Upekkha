@@ -88,6 +88,16 @@ img.custom-logo {
     @apply hover:text-blue-400;
   }
 
+  code {
+    @apply inline-block;
+    @apply border-[1px];
+    @apply border-slate-300;
+    @apply bg-slate-100;
+    @apply font-mono;
+    @apply px-1.5;
+    @apply rounded-sm;
+  }
+
   ul, ol {
     @apply ml-10;
     @apply list-outside;

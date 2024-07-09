@@ -2589,6 +2589,19 @@ img.custom-logo{
   color: rgb(118 169 250 / var(--tw-text-opacity));
 }
 
+.content-container code{
+  display: inline-block;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(185 196 208 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 252 253 / var(--tw-bg-opacity));
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+  border-radius: 0.125rem;
+}
+
 .content-container ul, .content-container ol{
   margin-left: 2.5rem;
   list-style-position: outside;

@@ -95,7 +95,7 @@ img.custom-logo {
     @apply bg-slate-100;
     @apply font-mono;
     @apply px-1.5;
-    @apply rounded-sm;
+    @apply rounded-md;
   }
 
   ul, ol {

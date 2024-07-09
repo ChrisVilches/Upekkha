@@ -20,3 +20,7 @@
 
   <!-- Must be hidden so that the theme switch doesn't do any color transition. -->
   <main class="flex-grow bg-white dark:bg-slate-600 dark:text-white my-8 py-10 hidden" id="main-container">
+
+    <div class="bg-yellow-200 text-black p-4 rounded-md hidden dark:block mx-4 mb-20">
+      Dark theme is in development! It's not complete right now.
+    </div>

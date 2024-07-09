@@ -93,8 +93,20 @@ function initLineModalBtns() {
   }
 }
 
+function removeLoadingOverlay() {
+  const overlayElement = document.querySelector("#loading-overlay");
+  const seconds = 0.3
+  overlayElement.style.transition = `opacity ${seconds}s linear 0s`
+  overlayElement.style.opacity = 0
+  document.body.classList.remove('overflow-hidden')
+  setTimeout(() => {
+    overlayElement.remove()
+  }, seconds * 1000)
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initSearchModal();
   initRecommendedCarousel();
   initLineModalBtns();
+  removeLoadingOverlay();
 });

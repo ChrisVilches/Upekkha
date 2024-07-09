@@ -111,6 +111,7 @@ img.custom-logo {
     @apply list-decimal;
   }
 
+  /* For plugin "Footnotes Made Easy" */
   ol.footnotes {
     @apply ml-4;
     @apply text-slate-400;

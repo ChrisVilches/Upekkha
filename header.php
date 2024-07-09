@@ -27,7 +27,7 @@
     </div>
 
     <? if (has_custom_logo()) : ?>
-      <div class="hidden md:block mt-10">
+      <div class="hidden md:block mt-4 size-20">
         <? the_custom_logo() ?>
       </div>
     <? endif ?>

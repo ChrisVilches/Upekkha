@@ -113,10 +113,14 @@ img.custom-logo {
 
   /* For plugin "Footnotes Made Easy" */
   ol.footnotes {
-    @apply ml-4;
-    @apply text-slate-400;
+    @apply ml-0;
+    @apply list-inside;
+    @apply text-slate-500;
     a {
-      @apply text-slate-400;
+      @apply text-slate-500;
+    }
+    li {
+      @apply pl-0;
     }
     .footnote-back-link-wrapper {
       @apply ml-2;

@@ -1,5 +1,8 @@
 <header class="bg-slate-700 px-4 pb-6">
   <div class="block md:flex flex-col items-center">
+    <div class="flex justify-end w-full mt-4">
+      <? get_template_part('./partials/theme-toggle') ?>
+    </div>
 
     <div class="md:hidden flex space-x-4 justify-end items-center pt-2">
       <button class="p-2 text-gray-300 hover:text-gray-100 duration-200 transition-colors" data-open-search-modal>
@@ -15,7 +18,7 @@
 
     <!-- TODO: (mobile) Maybe the icon would look better below the title.
                I haven't tried it yet because my blog has no logo yet. -->
-    <div class="flex space-x-4 md:space-x-0 items-center pt-4 md:pt-14">
+    <div class="flex space-x-4 md:space-x-0 items-center pt-4 md:pt-2">
       <? if (has_custom_logo()) : ?>
         <div class="sm:block md:hidden size-16 flex items-center">
           <? the_custom_logo() ?>
@@ -34,17 +37,26 @@
   </div>
 
   <nav>
+    <!-- TODO: The drawer is showing a little bit even when it's closed... omg
+               One hacky way to fix it is by using -left-0.5 instead of left-0.
+               That fixes it, but with potential side effects.          
+    -->
     <div id="sidebar-drawer" class="scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 left-0 z-40 h-full p-4 overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
+      <!-- TODO: (UPDATE: I think it's OK now) Put it in a more beautiful place inside the drawer -->
+      <div class="flex mb-8">
+        <div class="grow">
+          <? get_template_part('./partials/theme-toggle') ?>
+        </div>
+        <button type="button" data-drawer-hide="sidebar-drawer" aria-controls="sidebar-drawer" class="text-gray-400 p-2 bg-transparent rounded-lg flex items-center justify-center">
+          <i class="fa-solid fa-xmark text-xl"></i>
+          <span class="sr-only">Close</span>
+        </button>
+      </div>
+
       <div class="md:hidden sidebar-responsive-menu-container">
         <? wp_nav_menu(array('theme_location' => 'responsive-menu')) ?>
       </div>
       <? dynamic_sidebar('sidebar-widget') ?>
-      <button type="button" data-drawer-hide="sidebar-drawer" aria-controls="sidebar-drawer" class="text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
-        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-        </svg>
-        <span class="sr-only">Close</span>
-      </button>
     </div>
 
     <div class="main-nav hidden md:flex space-x-4 mt-8 justify-center mb-4">

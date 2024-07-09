@@ -93,20 +93,61 @@ function initLineModalBtns() {
   }
 }
 
+function isThemeDark() {
+  const html = document.querySelector("html");
+  return html.classList.contains("dark");
+}
+
 function removeLoadingOverlay() {
   const overlayElement = document.querySelector("#loading-overlay");
-  const seconds = 0.3
-  overlayElement.style.transition = `opacity ${seconds}s linear 0s`
-  overlayElement.style.opacity = 0
-  document.body.classList.remove('overflow-hidden')
+  const seconds = 0.3;
+  overlayElement.style.transition = `opacity ${seconds}s linear 0s`;
+  overlayElement.style.opacity = 0;
+  document.body.classList.remove("overflow-hidden");
   setTimeout(() => {
-    overlayElement.remove()
-  }, seconds * 1000)
+    overlayElement.remove();
+  }, seconds * 1000);
+}
+
+function initThemeToggleBtns() {
+  // Doing this removes the theme color transitions when the overlay is removed.
+  // The color transitions do show if the user toggles the theme again though.
+  document.querySelector("#main-container").classList.remove("hidden");
+  if (localStorage.getItem("wp-theme") === "dark") {
+    document.querySelector("html").classList.add("dark");
+  }
+
+  const getBtns = () =>
+    document.querySelectorAll("[data-role=theme-toggle-btn]");
+
+  const syncState = () => {
+    const isDark = isThemeDark();
+    getBtns().forEach((el) => (el.checked = isDark));
+  };
+
+  syncState()
+
+  for (const element of getBtns()) {
+    element.addEventListener("change", () => {
+      const html = document.querySelector("html");
+      const isDark = isThemeDark();
+      if (isDark) {
+        html.classList.remove("dark");
+        localStorage.removeItem("wp-theme");
+      } else {
+        html.classList.add("dark");
+        localStorage.setItem("wp-theme", "dark");
+      }
+
+      syncState();
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   initSearchModal();
   initRecommendedCarousel();
   initLineModalBtns();
+  initThemeToggleBtns();
   removeLoadingOverlay();
 });

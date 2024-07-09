@@ -2,6 +2,7 @@
   <div class="relative p-4 w-full max-w-2xl max-h-full">
     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
       <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+        <!-- TODO: The font glitches a bit, even with all the loading I implemented -->
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
           <i class="fa-brands fa-line text-green-500 pr-4"></i>Add me on Line!
         </h3>

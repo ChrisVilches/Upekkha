@@ -1,6 +1,6 @@
 <header class="bg-slate-700 px-4 pb-6">
   <div class="block md:flex flex-col items-center">
-    <div class="flex justify-end w-full mt-4">
+    <div class="hidden md:flex justify-end w-full mt-4">
       <? get_template_part('./partials/theme-toggle') ?>
     </div>
 

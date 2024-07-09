@@ -27,9 +27,13 @@ h3.wp-block-heading, h4.wp-block-heading {
 /* Image Block */
 .wp-block-image {
   @apply mb-10;
+  @apply text-center;
+  @apply text-slate-500;
+  @apply text-sm;
 }
 
 .wp-block-image img {
+  @apply mx-auto;
 }
 
 /* Gallery Block */

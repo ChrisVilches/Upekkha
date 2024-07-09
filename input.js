@@ -1,7 +1,7 @@
-// TODO: Should I keep jQuery? Find a way to remove it from dependencies? It sucks.
 import "flowbite"
 import { Modal } from 'flowbite'
-import { Carousel } from 'flowbite';
+import { Carousel } from 'flowbite'
+import qr from 'qr-encode'
 
 function initSearchModal () {
   const modalElement = document.querySelector('#search-modal')
@@ -67,8 +67,25 @@ function initRecommendedCarousel() {
   document.querySelector('[data-carousel-next]').addEventListener('click', carousel.next.bind(carousel))
 }
 
+function genQrSingle(selector, container) {
+  const element = container.querySelector(selector)
+  const content = element.getAttribute('data-qr-content')
+  element.src = qr(content, { type: 6, size: 6, level: 'Q' })
+}
+
+function initLineModalBtns() {
+  for(const element of document.querySelectorAll('[data-role=line-modal-btn]')) {
+    element.addEventListener('click', () => {
+      const modalId = element.getAttribute('data-modal-target')
+      const modalElement = document.querySelector(`#${modalId}`)
+      genQrSingle("[data-role=line-qr]", modalElement)
+    })
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => { 
   initSearchModal()
   initRecommendedCarousel()
+  initLineModalBtns()
 })
 

@@ -65,6 +65,11 @@ class CustomTheme
       "fa-icon" => "line",
       "class" => "hover:text-green-500"
     ),
+    "instagram" => array(
+      "label" => "Instagram",
+      "fa-icon" => "instagram",
+      "class" => "hover:text-pink-500"
+    ),
   );
 
   static function assets()

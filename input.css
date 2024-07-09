@@ -84,11 +84,18 @@ img.custom-logo {
     @apply hover:text-blue-400;
   }
 
-  ul {
+  ul, ol {
     @apply ml-10;
     @apply mb-10;
-    @apply list-disc;
     @apply list-outside;
+  }
+  
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
   }
 
   li {
@@ -129,6 +136,9 @@ img.custom-logo {
   @apply text-slate-200;
   
   h1, h2, h3, h4 {
+    @apply border-l-4;
+    @apply border-l-yellow-200;
+    @apply pl-4;
     @apply text-yellow-200;
     @apply text-lg;
   }

@@ -4,7 +4,7 @@
         <? the_title() ?>
       </h1>
 
-      <div class="px-4 md:px-10 text-slate-600 dark:text-slate-400 mb-10">
+      <div class="px-4 md:px-10 text-gray-500 dark:text-gray-400 mb-10">
         <div class="flex items-center space-x-2 justify-center">
           <i class="fa-regular fa-clock text-sm"></i>
           <div>

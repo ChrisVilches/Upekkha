@@ -78,7 +78,7 @@ class CustomTheme
 
     wp_enqueue_style("styles", get_template_directory_uri() . "/dist/style.css", array(), $theme_ver);
     wp_enqueue_style("font-awesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css", array(), "6.5.2", "all");
-    wp_enqueue_script("main-script", get_template_directory_uri() . "/dist/input.js", array(), $theme_ver);
+    wp_enqueue_script("main-script", get_template_directory_uri() . "/dist/main.js", array(), $theme_ver);
   }
 
   static function analytics()

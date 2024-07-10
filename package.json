@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css:prod": "NODE_ENV=production tailwindcss --postcss -i ./input.css -o ./dist/style.css",
-    "css:dev": "NODE_ENV=development tailwindcss --postcss -i ./input.css -o ./dist/style.css --watch",
+    "css:prod": "NODE_ENV=production tailwindcss --postcss -i ./main.css -o ./dist/style.css",
+    "css:dev": "NODE_ENV=development tailwindcss --postcss -i ./main.css -o ./dist/style.css --watch",
     "js:prod": "NODE_ENV=production node esbuild.config.mjs",
     "js:dev": "NODE_ENV=development node esbuild.config.mjs",
     "prebuild:prod": "rm -rf dist",

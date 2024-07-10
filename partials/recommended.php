@@ -1,7 +1,7 @@
 <? $query = CustomTheme::get_related_posts() ?>
 
 <? if ($query->post_count > 0) : ?>
-  <hr class="w-1/2 h-0.5 mx-auto my-20 bg-gray-300 border-0">
+  <hr class="w-1/2 h-0.5 mx-auto my-20 bg-gray-300 dark:bg-gray-600 border-0">
 
   <h1 class="text-lg font-bold text-center mb-10">You might also like</h1>
 

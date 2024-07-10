@@ -17,6 +17,8 @@ h4 {
 }
 
 .secondary-btn {
+  /* TODO: This button on dark mode has no hover styles (but in the light mode, it does),
+  so it can be improved */
   @apply grow;
   @apply md:grow-0;
   @apply py-2.5;

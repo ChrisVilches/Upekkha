@@ -5,7 +5,7 @@ function isProd() {
 }
 
 const config = {
-  entryPoints: ["input.js"],
+  entryPoints: ["main.js"],
   bundle: true,
   format: "esm",
   platform: "browser",

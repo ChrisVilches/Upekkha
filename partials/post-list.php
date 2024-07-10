@@ -1,7 +1,7 @@
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
   <? if (have_posts()) : ?>
     <? while (have_posts()) : the_post() ?>
-      <a href="<? the_permalink() ?>" class="flex flex-col border-[1px] border-slate-300 hover:border-slate-600 text-black hover:bg-slate-200 duration-700 transition-colors p-8">
+      <a href="<? the_permalink() ?>" class="flex flex-col border-[1px] border-slate-300 dark:border-slate-900 hover:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-700 dark:hover:border-slate-950 duration-700 transition-colors p-8">
         <div class="text-sm text-gray-500 mb-4">
           <?= get_the_date() ?>
         </div>

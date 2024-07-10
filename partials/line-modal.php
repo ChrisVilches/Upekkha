@@ -17,7 +17,7 @@
         <img src="" data-role="line-qr" data-qr-content="line://ti/p/~<?= $args['line-id'] ?>">
       </div>
       <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-        <button data-modal-hide="<?= $args['modal-id'] ?>" type="button" class="grow md:grow-0 py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">Close</button>
+        <button data-modal-hide="<?= $args['modal-id'] ?>" type="button" class="secondary-btn">Close</button>
       </div>
     </div>
   </div>

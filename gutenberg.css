@@ -54,6 +54,7 @@ h4.wp-block-heading {
   @apply border-l-4;
   @apply px-2;
   @apply border-black;
+  @apply dark:border-white;
 }
 
 .wp-block-quote::before {
@@ -74,6 +75,7 @@ h4.wp-block-heading {
   @apply px-10;
   @apply text-sm;
   @apply text-slate-600;
+  @apply dark:text-slate-200;
 }
 
 /* Table Block */

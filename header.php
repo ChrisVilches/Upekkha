@@ -41,9 +41,8 @@
                One hacky way to fix it is by using -left-0.5 instead of left-0.
                That fixes it, but with potential side effects.          
     -->
-    <div id="sidebar-drawer" class="scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 left-0 z-40 h-full p-4 overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
-      <!-- TODO: (UPDATE: I think it's OK now) Put it in a more beautiful place inside the drawer -->
-      <div class="flex mb-8">
+    <div id="sidebar-drawer" class="text-sm text-slate-200 bg-slate-900 pl-10 pr-10 pb-10 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 left-0 z-40 h-full overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
+      <div class="flex mb-4 sticky top-0 bg-slate-900 py-4">
         <div class="grow">
           <? get_template_part('./partials/theme-toggle') ?>
         </div>

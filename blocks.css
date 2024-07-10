@@ -1,5 +1,11 @@
 @import url("./plugin-blocks-overrides.css");
 
+/* 
+This CSS aims to cover common "Gutenberg" and "WP Githuber MD" blocks.
+However, it's not possible to cover all blocks, since the user could use any
+other editor library. So just add block styles as needed.
+*/
+
 .content-container {
   /* Default margin-bottom for all blocks. */
   p,
@@ -84,10 +90,6 @@
     @apply text-lg;
   }
 
-  /* Paragraph Block */
-  .wp-block-paragraph {
-  }
-
   /* Image Block */
   .wp-caption,
   .wp-block-image {
@@ -97,9 +99,11 @@
     @apply text-sm;
   }
 
+  p img,
   .wp-caption,
   .wp-block-image img {
     @apply mx-auto;
+    @apply max-w-full;
   }
 
   /* For the WP Mermaid plugin */
@@ -109,204 +113,44 @@
     }
   }
 
-  /* Gallery Block */
-  .wp-block-gallery {
-  }
-
-  .wp-block-gallery img {
-  }
-
   /* Quote Block */
+  /*   
+  For multi-paragraph (not <br>) quotes, with the author at the bottom, use something like this
+  when using Markdown:
+
+  > Text 1
+  >
+  > Text 2
+  >
+  > <cite>Author</cite>
+  */
+
   blockquote,
   .wp-block-quote {
     @apply border-l-4;
-    @apply px-2;
+    @apply pl-16;
     @apply border-black;
     @apply dark:border-white;
-  }
 
-  blockquote::before,
-  .wp-block-quote::before {
-    font-family: "Font Awesome 6 Free", sans-serif;
-    content: "\f10d";
+    &::before {
+      font-family: "Font Awesome 6 Free", sans-serif;
+      content: "\f10d";
+      @apply -ml-12;
+      @apply font-bold;
+      @apply text-2xl;
+      @apply absolute;
+    }
 
-    @apply font-bold;
-    @apply text-2xl;
-    @apply absolute;
-  }
+    p {
+      @apply pb-2;
+      @apply italic;
+      @apply text-sm;
+    }
 
-  /* TODO: There's some work to do to make quotes look better */
-
-  blockquote p,
-  .wp-block-quote p {
-    @apply pb-2;
-    @apply px-10;
-    @apply italic;
-    @apply text-sm;
-  }
-
-  blockquote cite,
-  .wp-block-quote cite {
-    @apply px-10;
-    @apply text-sm;
-    @apply text-slate-600;
-    @apply dark:text-slate-200;
-  }
-
-  /* Table Block */
-  .wp-block-table {
-  }
-
-  .wp-block-table table {
-  }
-
-  .wp-block-table th {
-  }
-
-  .wp-block-table td {
-  }
-
-  /* Media & Text Block */
-  .wp-block-media-text {
-  }
-
-  .wp-block-media-text__content {
-  }
-
-  /* Button Block */
-  .wp-block-button {
-  }
-
-  .wp-block-button__link {
-  }
-
-  /* Spacer Block */
-  .wp-block-spacer {
-  }
-
-  /* Separator Block */
-  .wp-block-separator {
-  }
-
-  .wp-block-separator.is-style-dots {
-  }
-
-  /* Group Block */
-  .wp-block-group {
-  }
-
-  /* Cover Block */
-  .wp-block-cover {
-  }
-
-  .wp-block-cover__image {
-  }
-
-  /* Video Block */
-  .wp-block-video {
-  }
-
-  .wp-block-video video {
-  }
-
-  /* Audio Block */
-  .wp-block-audio {
-  }
-
-  .wp-block-audio audio {
-  }
-
-  /* Code Block */
-  .wp-block-code {
-  }
-
-  .wp-block-code code {
-  }
-
-  /* Preformatted Block */
-  .wp-block-preformatted {
-  }
-
-  /* Pullquote Block */
-  .wp-block-pullquote {
-  }
-
-  .wp-block-pullquote p {
-  }
-
-  .wp-block-pullquote cite {
-  }
-
-  /* Table of Contents Block */
-  .wp-block-toc {
-  }
-
-  .wp-block-toc__list {
-  }
-
-  .wp-block-toc__item {
-  }
-
-  .wp-block-toc__item a {
-  }
-
-  /* Custom HTML Block */
-  .wp-block-custom-html {
-  }
-
-  /* Shortcode Block */
-  .wp-block-shortcode {
-  }
-
-  /* Embed Block */
-  .wp-block-embed {
-  }
-
-  .wp-block-embed__wrapper {
-  }
-
-  /* Verse Block */
-  .wp-block-verse {
-  }
-
-  /* Social Icons Block */
-  .wp-block-social-links {
-  }
-
-  .wp-block-social-link {
-  }
-
-  /* Columns Block */
-  .wp-block-columns {
-  }
-
-  .wp-block-column {
-  }
-
-  /* Site Title Block */
-  .wp-block-site-title {
-  }
-
-  /* Site Tagline Block */
-  .wp-block-site-tagline {
-  }
-
-  /* Site Logo Block */
-  .wp-block-site-logo {
-  }
-
-  /* Post Title Block */
-  .wp-block-post-title {
-  }
-
-  /* Post Content Block */
-  .wp-block-post-content {
-  }
-
-  /* Navigation Block */
-  .wp-block-navigation {
-  }
-
-  .wp-block-navigation-link {
+    cite {
+      @apply text-sm;
+      @apply text-slate-600;
+      @apply dark:text-slate-200;
+    }
   }
 }

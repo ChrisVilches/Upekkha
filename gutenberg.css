@@ -2,21 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TODO: Maybe I can wrap this in the container class I have in the other file.
+      Remove all the wp- prefixes, such that this works well with Gutenberg and Markdown */
+
 /* Heading Blocks */
-.wp-block-heading {
+h1, h2, h3, h4, .wp-block-heading {
   @apply font-bold;
 }
 
-h1.wp-block-heading {
+h1 {
   @apply text-2xl;
 }
 
-h2.wp-block-heading {
+h2 {
   @apply text-xl;
 }
 
-h3.wp-block-heading,
-h4.wp-block-heading {
+h3,
+h4 {
   @apply text-lg;
 }
 
@@ -50,14 +53,14 @@ h4.wp-block-heading {
 }
 
 /* Quote Block */
-.wp-block-quote {
+blockquote, .wp-block-quote {
   @apply border-l-4;
   @apply px-2;
   @apply border-black;
   @apply dark:border-white;
 }
 
-.wp-block-quote::before {
+blockquote::before, .wp-block-quote::before {
   font-family: "Font Awesome 6 Free", sans-serif;
   content: "\f10d";
 
@@ -66,12 +69,16 @@ h4.wp-block-heading {
   @apply absolute;
 }
 
-.wp-block-quote p {
+/* TODO: There's some work to do to make quotes look better */
+
+blockquote p, .wp-block-quote p {
   @apply pb-2;
   @apply px-10;
+  @apply italic;
+  @apply text-sm;
 }
 
-.wp-block-quote cite {
+blockquote cite, .wp-block-quote cite {
   @apply px-10;
   @apply text-sm;
   @apply text-slate-600;

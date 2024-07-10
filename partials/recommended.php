@@ -22,7 +22,7 @@
                   </p>
                 </div>
                 <? if (has_post_thumbnail()) : ?>
-                  <img src="<?= the_post_thumbnail_url() ?>" class="absolute opacity-80 group-hover:opacity-70 duration-300 transition-opacity w-full">
+                  <? the_post_thumbnail('medium', array("class" => "absolute opacity-80 group-hover:opacity-70 duration-300 transition-opacity w-full")) ?>
                 <? endif ?>
               </a>
             </div>

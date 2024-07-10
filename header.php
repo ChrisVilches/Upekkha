@@ -37,11 +37,13 @@
   </div>
 
   <nav>
-    <!-- TODO: The drawer is showing a little bit even when it's closed... omg
-               One hacky way to fix it is by using -left-0.5 instead of left-0.
-               That fixes it, but with potential side effects.          
-    -->
-    <div id="sidebar-drawer" class="text-sm text-slate-200 bg-slate-900 pl-10 pr-10 pb-10 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 left-0 z-40 h-full overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
+    <?
+    // NOTE: The drawer has an issue where even when it's closed, you can see the scrollbar a bit.
+    // This is probably because of the scrollbar styling. The way to fix it was by adding -left-[0.1px]
+    // which moves it a tiny bit to the left.
+    // (Issue was only seen on Chrome. Firefox renders the scrollbar differently, so there was no problem).
+    ?>
+    <div id="sidebar-drawer" class="text-sm text-slate-200 bg-slate-900 pl-10 pr-10 pb-10 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 -left-[0.1px] z-40 h-full overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
       <div class="flex mb-4 sticky top-0 bg-slate-900 py-4">
         <div class="grow">
           <? get_template_part('./partials/theme-toggle') ?>
@@ -66,7 +68,6 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
 
-      <!-- TODO: Not sure about putting the drawer toggle button here... -->
       <button type="button" class="p-2 text-gray-300 hover:text-gray-100 duration-200 transition-colors" data-drawer-target="sidebar-drawer" data-drawer-show="sidebar-drawer" aria-controls="sidebar-drawer">
         <span class="sr-only">Menu</span>
         <i class="fa fa-bars"></i>

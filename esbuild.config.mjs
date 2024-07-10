@@ -15,6 +15,7 @@ const config = {
   minify: isProd(),
   bundle: true,
   // TODO: This line breaks the bundle. It seems old browsers don't support dynamic imports.
+  //       Resolve this TODO by changing the versions to supported browsers. Or remove TODO if it works anyway.
   // target: ["chrome58", "firefox57", "safari11", "edge16"],
 };
 

@@ -105,13 +105,7 @@ class CustomTheme
 
     wp_enqueue_style("styles", get_template_directory_uri() . "/dist/style.css", array(), $theme_ver);
     wp_enqueue_style("font-awesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css", array(), "6.5.2", "all");
-    wp_enqueue_script("main-script", get_template_directory_uri() . "/dist/main.js", array(), $theme_ver);
-  }
-
-  static function analytics()
-  {
-    // TODO: This will be probably unused.
-    echo "<h1>Analytics</h1>";
+    wp_enqueue_script("main-script", get_template_directory_uri() . "/dist/main.js", array(), $theme_ver, true);
   }
 
   static function theme_supports()
@@ -191,11 +185,8 @@ class CustomTheme
         'id' => 'sidebar-widget',
         'name' => 'Sidebar Widget',
         'description' => 'Customizable widget that gets displayed in the drawer sidebar',
-        // TODO: What's all of this?
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<div class="widget-title-holder"><h3 class="widget-title">',
-        'after_title' => '</h3></div>'
+        'after_widget' => '</div>'
       )
     );
   }

@@ -1,9 +1,12 @@
-@import url("./gutenberg.css");
+@import url("./blocks.css");
 @import url("./theme-toggle.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /* TODO: This font is actually rather hard to read, specially when uppercased */
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   @apply font-roboto;
@@ -97,115 +100,6 @@ img.custom-logo {
   @apply rounded-full;
 }
 
-.content-container {
-  /* Default margin-bottom for all blocks. */
-  p,
-  ul,
-  ol,
-  div,
-  a,
-  figure,
-  blockquote,
-  h1,
-  h2,
-  h3,
-  h4 {
-    @apply mb-10;
-  }
-
-  p {
-    @apply leading-9;
-  }
-
-  a {
-    @apply text-blue-600;
-    @apply hover:text-blue-400;
-    @apply dark:text-blue-500;
-    @apply dark:hover:text-blue-300;
-    @apply transition-colors;
-    @apply duration-300;
-  }
-
-  code {
-    @apply inline-block;
-    @apply border-[1px];
-    @apply border-slate-300;
-    @apply bg-slate-100;
-    @apply dark:bg-slate-700;
-    @apply dark:border-slate-900;
-    @apply text-pink-500;
-    @apply font-mono;
-    @apply px-1.5;
-    @apply leading-7;
-    @apply rounded-md;
-  }
-
-  ul,
-  ol {
-    @apply ml-10;
-    @apply list-outside;
-  }
-
-  ul {
-    @apply list-disc;
-  }
-
-  ol {
-    @apply list-decimal;
-  }
-
-  /* For plugin "Footnotes Made Easy" */
-  ol.footnotes {
-    @apply ml-0;
-    @apply list-inside;
-    @apply text-slate-500;
-    @apply dark:text-slate-200;
-
-    a {
-      @apply text-slate-500;
-      @apply dark:text-slate-200;
-    }
-
-    li {
-      @apply pl-0;
-    }
-
-    .footnote-back-link-wrapper {
-      @apply ml-2;
-    }
-  }
-
-  mjx-container {
-    @apply overflow-x-auto;
-    @apply overflow-y-clip;
-  }
-
-  li {
-    @apply pl-1;
-    @apply mb-2;
-  }
-}
-
-/* Apply this style only to the Dracula theme. For other themes it doesn't look very good. */
-.enlighter-t-dracula.enlighter-default {
-  .enlighter-code {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  border-radius: 10px;
-}
-
-/* TODO: This styling won't work for all widgets.
-        For tag clouds, it breaks lines (it should all be in the same line)
-        For categories with post count, it doesn't show the count in the same line.
-        Etc.
-*/
-
-/* TODO: In order to make the menu items have full width, you have to select stretch-items
-         in WP widget editor. It's not very elegant. Maybe I should force it using CSS,
-         but perhaps the user wants to not stretch them, so maybe it's useful to have the
-         option. */
 .sidebar-drawer {
   h1,
   h2,

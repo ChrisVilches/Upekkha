@@ -1,0 +1,312 @@
+@import url("./plugin-blocks-overrides.css");
+
+.content-container {
+  /* Default margin-bottom for all blocks. */
+  p,
+  ul,
+  ol,
+  div,
+  a,
+  figure,
+  blockquote,
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply mb-10;
+  }
+
+  p {
+    @apply leading-9;
+  }
+
+  a {
+    @apply text-blue-600;
+    @apply hover:text-blue-400;
+    @apply dark:text-blue-500;
+    @apply dark:hover:text-blue-300;
+    @apply transition-colors;
+    @apply duration-300;
+  }
+
+  code {
+    @apply inline-block;
+    @apply border-[1px];
+    @apply border-slate-300;
+    @apply bg-slate-100;
+    @apply dark:bg-slate-700;
+    @apply dark:border-slate-900;
+    @apply text-pink-500;
+    @apply font-mono;
+    @apply px-1.5;
+    @apply leading-7;
+    @apply rounded-md;
+  }
+
+  ul,
+  ol {
+    @apply ml-10;
+    @apply list-outside;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply pl-1;
+    @apply mb-2;
+  }
+
+  /* Heading Blocks */
+  h1,
+  h2,
+  h3,
+  h4,
+  .wp-block-heading {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3,
+  h4 {
+    @apply text-lg;
+  }
+
+  /* Paragraph Block */
+  .wp-block-paragraph {
+  }
+
+  /* Image Block */
+  .wp-caption,
+  .wp-block-image {
+    @apply text-center;
+    @apply text-gray-500;
+    @apply dark:text-gray-400;
+    @apply text-sm;
+  }
+
+  .wp-caption,
+  .wp-block-image img {
+    @apply mx-auto;
+  }
+
+  /* For the WP Mermaid plugin */
+  .wp-block-wp-mermaid-block {
+    svg {
+      @apply mx-auto;
+    }
+  }
+
+  /* Gallery Block */
+  .wp-block-gallery {
+  }
+
+  .wp-block-gallery img {
+  }
+
+  /* Quote Block */
+  blockquote,
+  .wp-block-quote {
+    @apply border-l-4;
+    @apply px-2;
+    @apply border-black;
+    @apply dark:border-white;
+  }
+
+  blockquote::before,
+  .wp-block-quote::before {
+    font-family: "Font Awesome 6 Free", sans-serif;
+    content: "\f10d";
+
+    @apply font-bold;
+    @apply text-2xl;
+    @apply absolute;
+  }
+
+  /* TODO: There's some work to do to make quotes look better */
+
+  blockquote p,
+  .wp-block-quote p {
+    @apply pb-2;
+    @apply px-10;
+    @apply italic;
+    @apply text-sm;
+  }
+
+  blockquote cite,
+  .wp-block-quote cite {
+    @apply px-10;
+    @apply text-sm;
+    @apply text-slate-600;
+    @apply dark:text-slate-200;
+  }
+
+  /* Table Block */
+  .wp-block-table {
+  }
+
+  .wp-block-table table {
+  }
+
+  .wp-block-table th {
+  }
+
+  .wp-block-table td {
+  }
+
+  /* Media & Text Block */
+  .wp-block-media-text {
+  }
+
+  .wp-block-media-text__content {
+  }
+
+  /* Button Block */
+  .wp-block-button {
+  }
+
+  .wp-block-button__link {
+  }
+
+  /* Spacer Block */
+  .wp-block-spacer {
+  }
+
+  /* Separator Block */
+  .wp-block-separator {
+  }
+
+  .wp-block-separator.is-style-dots {
+  }
+
+  /* Group Block */
+  .wp-block-group {
+  }
+
+  /* Cover Block */
+  .wp-block-cover {
+  }
+
+  .wp-block-cover__image {
+  }
+
+  /* Video Block */
+  .wp-block-video {
+  }
+
+  .wp-block-video video {
+  }
+
+  /* Audio Block */
+  .wp-block-audio {
+  }
+
+  .wp-block-audio audio {
+  }
+
+  /* Code Block */
+  .wp-block-code {
+  }
+
+  .wp-block-code code {
+  }
+
+  /* Preformatted Block */
+  .wp-block-preformatted {
+  }
+
+  /* Pullquote Block */
+  .wp-block-pullquote {
+  }
+
+  .wp-block-pullquote p {
+  }
+
+  .wp-block-pullquote cite {
+  }
+
+  /* Table of Contents Block */
+  .wp-block-toc {
+  }
+
+  .wp-block-toc__list {
+  }
+
+  .wp-block-toc__item {
+  }
+
+  .wp-block-toc__item a {
+  }
+
+  /* Custom HTML Block */
+  .wp-block-custom-html {
+  }
+
+  /* Shortcode Block */
+  .wp-block-shortcode {
+  }
+
+  /* Embed Block */
+  .wp-block-embed {
+  }
+
+  .wp-block-embed__wrapper {
+  }
+
+  /* Verse Block */
+  .wp-block-verse {
+  }
+
+  /* Social Icons Block */
+  .wp-block-social-links {
+  }
+
+  .wp-block-social-link {
+  }
+
+  /* Columns Block */
+  .wp-block-columns {
+  }
+
+  .wp-block-column {
+  }
+
+  /* Site Title Block */
+  .wp-block-site-title {
+  }
+
+  /* Site Tagline Block */
+  .wp-block-site-tagline {
+  }
+
+  /* Site Logo Block */
+  .wp-block-site-logo {
+  }
+
+  /* Post Title Block */
+  .wp-block-post-title {
+  }
+
+  /* Post Content Block */
+  .wp-block-post-content {
+  }
+
+  /* Navigation Block */
+  .wp-block-navigation {
+  }
+
+  .wp-block-navigation-link {
+  }
+}

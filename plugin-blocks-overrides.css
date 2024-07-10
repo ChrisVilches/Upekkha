@@ -1,0 +1,39 @@
+.content-container {
+  /* For plugin "Simple MathJax" */
+  mjx-container {
+    @apply overflow-x-auto;
+    @apply overflow-y-clip;
+  }
+
+  /* For plugin "Footnotes Made Easy" */
+  ol.footnotes {
+    @apply ml-0;
+    @apply list-inside;
+    @apply text-slate-500;
+    @apply dark:text-slate-200;
+
+    a {
+      @apply text-slate-500;
+      @apply dark:text-slate-200;
+    }
+
+    li {
+      @apply pl-0;
+    }
+
+    .footnote-back-link-wrapper {
+      @apply ml-2;
+    }
+  }
+
+  /* For plugin "Enlighter"
+  Apply this style only to the Dracula theme. For other themes it doesn't look very good. */
+  .enlighter-t-dracula.enlighter-default {
+    .enlighter-code {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    border-radius: 10px;
+  }
+}

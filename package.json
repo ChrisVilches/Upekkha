@@ -6,10 +6,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "css:prod": "NODE_ENV=production tailwindcss --postcss -i ./input.css -o ./dist/style.css",
     "css:dev": "NODE_ENV=development tailwindcss --postcss -i ./input.css -o ./dist/style.css --watch",
-    "js:prod": "NODE_ENV=production esbuild input.js --bundle --outfile=dist/script.js --minify",
-    "js:dev": "NODE_ENV=development esbuild input.js --bundle --outfile=dist/script.js --watch",
+    "js:prod": "NODE_ENV=production node esbuild.config.mjs",
+    "js:dev": "NODE_ENV=development node esbuild.config.mjs",
+    "prebuild:prod": "rm -rf dist",
     "build:prod": "npm run css:prod && npm run js:prod",
-    "lint": "prettier --write '**/*.{js,css}'"
+    "lint": "prettier --write '**/*.{js,css,mjs}'"
   },
   "author": "",
   "license": "ISC",

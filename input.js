@@ -1,5 +1,4 @@
 import { Modal, Carousel } from "flowbite";
-import qr from "qr-encode";
 
 function initSearchModal() {
   const modalElement = document.querySelector("#search-modal");
@@ -75,7 +74,8 @@ function initRecommendedCarousel() {
     .addEventListener("click", carousel.next.bind(carousel));
 }
 
-function genQrSingle(selector, container) {
+async function genQrSingle(selector, container) {
+  const qr = (await import("qr-encode")).default;
   const element = container.querySelector(selector);
   const content = element.getAttribute("data-qr-content");
   element.src = qr(content, { type: 6, size: 6, level: "Q" });
@@ -125,7 +125,7 @@ function initThemeToggleBtns() {
     getBtns().forEach((el) => (el.checked = isDark));
   };
 
-  syncState()
+  syncState();
 
   for (const element of getBtns()) {
     element.addEventListener("change", () => {

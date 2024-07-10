@@ -78,7 +78,7 @@ class CustomTheme
 
     wp_enqueue_style("styles", get_template_directory_uri() . "/dist/style.css", array(), $theme_ver);
     wp_enqueue_style("font-awesome", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css", array(), "6.5.2", "all");
-    wp_enqueue_script("js", get_template_directory_uri() . "/dist/script.js", array(), $theme_ver);
+    wp_enqueue_script("main-script", get_template_directory_uri() . "/dist/input.js", array(), $theme_ver);
   }
 
   static function analytics()
@@ -173,6 +173,14 @@ class CustomTheme
     );
   }
 }
+
+add_filter('wp_script_attributes', function ($attributes) {
+  if (isset($attributes['id']) && $attributes['id'] === 'main-script-js') {
+    $attributes['type'] = 'module';
+  }
+
+  return $attributes;
+}, 10, 1);
 
 add_action('widgets_init', 'CustomTheme::add_custom_sidebar');
 add_action('customize_register', "CustomTheme::add_customizer");

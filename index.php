@@ -1,11 +1,16 @@
 <?
 $search_query = get_search_query();
 $filter = ThemeUtil::get_filter_condition();
+$archive_date = ThemeUtil::get_archive_date_fmt();
 ?>
 
 <div class="px-4 md:px-10">
-  <? if ($search_query || $filter) : ?>
+  <? if ($search_query || $filter || $archive_date) : ?>
     <div class="mb-10 bg-slate-200 border-slate-600 dark:bg-slate-700 dark:border-slate-950 border-[1px] p-4">
+      <? if ($archive_date) : ?>
+        <span class="font-bold">Archive:</span> <?= $archive_date ?>
+      <? endif ?>
+
       <? if ($search_query) : ?>
         <div class="text-lg leading-9">
           <span class="font-bold">Search results for:</span> <?= $search_query ?>

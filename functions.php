@@ -30,6 +30,33 @@ class ThemeUtil
 
     return null;
   }
+
+  static function get_archive_date_fmt()
+  {
+    if (!is_date()) return null;
+
+    $fmt = array(
+      1 => "Y",
+      2 => "F, Y",
+      3 => get_option('date_format')
+    );
+
+    $date = new DateTime();
+
+    $y = get_query_var('year');
+    $m = get_query_var('monthnum');
+    $d = get_query_var('day');
+    $n = !empty($y) + !empty($m) + !empty($d);
+
+    // Values need to be at least 1, or else setDate() won't work properly.
+    if (!$y) $y = 1;
+    if (!$m) $m = 1;
+    if (!$d) $d = 1;
+
+    $date->setDate($y, $m, $d);
+
+    return $date->format($fmt[$n]);
+  }
 }
 
 class CustomTheme

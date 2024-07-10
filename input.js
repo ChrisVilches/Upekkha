@@ -15,7 +15,9 @@ function initSearchModal() {
   // Focus on the search input when the search modal is shown.
   const options = {
     onShow: () => {
-      modalElement.querySelector("input[type=text]").focus();
+      if (!isMobile()) {
+        modalElement.querySelector("input[type=text]").focus();
+      }
     },
   };
 
@@ -96,6 +98,17 @@ function initLineModalBtns() {
 function isThemeDark() {
   const html = document.querySelector("html");
   return html.classList.contains("dark");
+}
+
+let isMobileMemo = null;
+
+function isMobile() {
+  if (isMobileMemo !== null) return isMobileMemo;
+  isMobileMemo = false;
+  try {
+    isMobileMemo = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  } catch {}
+  return isMobileMemo;
 }
 
 function removeLoadingOverlay() {

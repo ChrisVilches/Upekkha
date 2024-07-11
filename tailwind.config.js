@@ -23,7 +23,7 @@ module.exports = {
     extend: {
       fontSize: {
         "sm-plus": ["1rem", "1.7rem"],
-        "base-plus": "1.5rem",
+        "base-plus": "1.25rem",
         lg: ["1.65rem", "2rem"],
         xl: ["1.8rem", "2.4rem"],
         "2xl": ["2.25rem", "2.5rem"],

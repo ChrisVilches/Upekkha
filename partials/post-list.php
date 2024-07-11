@@ -5,9 +5,9 @@
         <div class="text-sm text-gray-500 mb-4">
           <?= get_the_date() ?>
         </div>
-        <p class="font-bold text-2xl grow">
+        <h2 class="font-bold grow">
           <? the_title() ?>
-        </p>
+        </h2>
         <? if (has_post_thumbnail()) : ?>
           <div class="w-full max-h-40 mt-8">
             <? the_post_thumbnail('medium', array("class" => "object-cover max-h-40 w-full")) ?>

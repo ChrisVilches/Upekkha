@@ -18,7 +18,9 @@ other editor library. So just add block styles as needed.
   h1,
   h2,
   h3,
-  h4 {
+  h4,
+  h5,
+  h6 {
     @apply mb-10;
   }
 
@@ -66,28 +68,6 @@ other editor library. So just add block styles as needed.
   li {
     @apply pl-1;
     @apply mb-2;
-  }
-
-  /* Heading Blocks */
-  h1,
-  h2,
-  h3,
-  h4,
-  .wp-block-heading {
-    @apply font-bold;
-  }
-
-  h1 {
-    @apply text-2xl;
-  }
-
-  h2 {
-    @apply text-xl;
-  }
-
-  h3,
-  h4 {
-    @apply text-lg;
   }
 
   /* Image Block */

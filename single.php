@@ -1,19 +1,19 @@
 <? if (have_posts()) : while (have_posts()) : the_post() ?>
     <article>
-      <h1 class="px-4 md:px-10 text-3xl mb-10 font-bold text-center">
+      <h1 class="px-4 md:px-10 mb-10 text-center">
         <? the_title() ?>
       </h1>
 
-      <div class="px-4 md:px-10 text-gray-500 dark:text-gray-400 mb-10">
+      <div class="px-4 md:px-10 text-gray-500 dark:text-gray-400 mb-10 text-sm">
         <div class="flex items-center space-x-2 justify-center">
-          <i class="fa-regular fa-clock text-sm"></i>
+          <i class="fa-regular fa-clock"></i>
           <div>
             <?= get_the_date() ?>
           </div>
         </div>
 
         <div class="flex items-center space-x-2 justify-center">
-          <i class="fa-regular fa-user text-sm"></i>
+          <i class="fa-regular fa-user"></i>
           <div>
             <?= get_the_author() ?>
           </div>

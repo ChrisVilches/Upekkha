@@ -22,12 +22,12 @@ module.exports = {
     // },
     extend: {
       fontSize: {
-        // sm: "1rem",
-        // base: "1.5rem",
-        // lg: "1.6rem",
-        // xl: "1.8rem",
-        // "2xl": "2.25rem",
-        // "3xl": "2.4rem",
+        "sm-plus": ["1rem", "1.7rem"],
+        "base-plus": "1.5rem",
+        lg: ["1.65rem", "2rem"],
+        xl: ["1.8rem", "2.3rem"],
+        "2xl": ["2.25rem", "2.5rem"],
+        "3xl": "2.4rem",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

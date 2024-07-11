@@ -24,6 +24,9 @@ other editor library. So just add block styles as needed.
     @apply mb-10;
   }
 
+  @apply text-base;
+  @apply md:text-base-plus;
+
   p {
     @apply leading-9;
   }

@@ -1,11 +1,11 @@
-<h1 class="text-lg font-bold text-center mb-10">About <?= $args['author']->display_name ?></h1>
+<h2 class="text-center mb-10">About <?= $args['author']->display_name ?></h2>
 
 <div class="md:flex">
   <div class="flex justify-center mb-8">
     <?= get_avatar($args['author']->ID, 64, null, null, array("class" => "rounded-full")) ?>
   </div>
 
-  <div class="grow px-10 text-center md:text-start mb-8">
+  <div class="grow px-10 text-center md:text-start mb-8 text-base md:text-base-plus">
     <?= $args['author']->description ?>
   </div>
 </div>

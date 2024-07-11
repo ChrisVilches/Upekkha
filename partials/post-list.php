@@ -5,7 +5,7 @@
         <div class="text-sm text-gray-500 mb-4">
           <?= get_the_date() ?>
         </div>
-        <h2 class="font-bold grow">
+        <h2 class="grow">
           <? the_title() ?>
         </h2>
         <? if (has_post_thumbnail()) : ?>

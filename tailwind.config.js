@@ -25,9 +25,9 @@ module.exports = {
         // sm: "1rem",
         // base: "1.5rem",
         // lg: "1.6rem",
-        xl: "1.8rem",
-        "2xl": "2.25rem",
-        "3xl": "2.4rem",
+        // xl: "1.8rem",
+        // "2xl": "2.25rem",
+        // "3xl": "2.4rem",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

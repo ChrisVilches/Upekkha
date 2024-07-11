@@ -1,5 +1,7 @@
 import { Modal, Carousel } from "flowbite";
 
+// TODO: Was jQuery added again randomly?!?!?!??!??!?!?
+
 function initSearchModal() {
   const modalElement = document.querySelector("#search-modal");
 

@@ -66,3 +66,6 @@ module.exports = {
     }),
   ],
 };
+
+// TODO: I think the font sizes (text-sm, text-lg, text-xl) can be configured here. Don't try to add hardcoded
+//       utility classes in the HTML markup. Just modify it here and see the entire page change.

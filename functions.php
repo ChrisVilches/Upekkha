@@ -1,5 +1,15 @@
 <?
 
+add_action('current_screen', function () {
+  if (is_admin()) {
+    $current_screen = get_current_screen();
+    if ($current_screen && in_array($current_screen->base, ['post', 'page'])) {
+      require get_template_directory() . '/capitalization/capitalization.php';
+    }
+  }
+});
+
+
 class ThemeUtil
 {
   static function has_prev_page()

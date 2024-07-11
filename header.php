@@ -42,6 +42,8 @@
     // This is probably because of the scrollbar styling. The way to fix it was by adding -left-[0.1px]
     // which moves it a tiny bit to the left.
     // (Issue was only seen on Chrome. Firefox renders the scrollbar differently, so there was no problem).
+
+    // TODO: Not yet fixed!!! I just checked the production site, and still shows.
     ?>
     <div id="sidebar-drawer" class="text-sm text-slate-200 bg-slate-900 pl-10 pr-10 pb-10 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 -left-[0.1px] z-40 h-full overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
       <div class="flex mb-4 sticky top-0 bg-slate-900 py-4">

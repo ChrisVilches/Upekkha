@@ -11,16 +11,24 @@ module.exports = {
     // TODO: I think the font sizes (text-sm, text-lg, text-xl) can be configured here. Don't try to add hardcoded
     //       utility classes in the HTML markup. Just modify it here and see the entire page change.
     //       https://tailwindcss.com/docs/font-size
-    // Done, init?
-    fontSize: {
-      sm: "1rem",
-      base: "1.5rem",
-      lg: "1.6rem",
-      xl: "1.8rem",
-      "2xl": "2.25rem",
-      "3xl": "2.4rem",
-    },
+    // TODO: On Mobile, some things look too big.
+    // fontSize: {
+    //   sm: "1rem",
+    //   base: "1.5rem",
+    //   lg: "1.6rem",
+    //   xl: "1.8rem",
+    //   "2xl": "2.25rem",
+    //   "3xl": "2.4rem",
+    // },
     extend: {
+      fontSize: {
+        // sm: "1rem",
+        // base: "1.5rem",
+        // lg: "1.6rem",
+        xl: "1.8rem",
+        "2xl": "2.25rem",
+        "3xl": "2.4rem",
+      },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
         rajdhani: ["Rajdhani", "serif"],

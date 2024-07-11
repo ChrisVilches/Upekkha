@@ -124,7 +124,7 @@ other editor library. So just add block styles as needed.
     p {
       @apply pb-2;
       @apply italic;
-      @apply text-sm;
+      @apply text-base;
     }
 
     cite {

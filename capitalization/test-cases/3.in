@@ -14,3 +14,7 @@
 <!--wp:heading-->
    <h1  class=\"wp-block-class\">a title</h1>
    <!--/wp:heading      -->
+
+<!--wp:heading {"level":2} -->
+   <h1  class=\"wp-block-class\">this is a WordPress bLog</h1>
+   <!--  /wp:heading -->

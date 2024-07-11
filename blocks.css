@@ -128,10 +128,12 @@ other editor library. So just add block styles as needed.
       @apply pb-2;
       @apply italic;
       @apply text-base;
+      @apply md:text-base-plus;
     }
 
     cite {
-      @apply text-sm;
+      @apply text-base;
+      @apply md:text-base-plus;
       @apply text-slate-600;
       @apply dark:text-slate-200;
     }

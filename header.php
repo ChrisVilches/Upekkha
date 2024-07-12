@@ -45,7 +45,7 @@
 
     // TODO: Not yet fixed!!! I just checked the production site, and still shows.
     ?>
-    <div id="sidebar-drawer" class="text-sm text-slate-200 bg-slate-900 pl-10 pr-10 pb-10 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 -left-[0.1px] z-40 h-full overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
+    <div id="sidebar-drawer" class="text-slate-200 bg-slate-900 pl-10 pr-10 pb-10 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 -left-[0.1px] z-40 h-full overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
       <div class="flex mb-4 sticky top-0 bg-slate-900 py-4">
         <div class="grow">
           <? get_template_part('./partials/theme-toggle') ?>
@@ -56,10 +56,12 @@
         </button>
       </div>
 
-      <div class="md:hidden sidebar-responsive-menu-container">
-        <? wp_nav_menu(array('theme_location' => 'responsive-menu')) ?>
+      <div class="prose prose-invert prose-sm md:prose md:prose-invert prose-li:my-0 prose-a:no-underline max-w-none">
+        <div class="md:hidden sidebar-responsive-menu-container">
+          <? wp_nav_menu(array('theme_location' => 'responsive-menu')) ?>
+        </div>
+        <? dynamic_sidebar('sidebar-widget') ?>
       </div>
-      <? dynamic_sidebar('sidebar-widget') ?>
     </div>
 
     <div class="main-nav hidden md:flex space-x-4 mt-8 justify-center mb-4">

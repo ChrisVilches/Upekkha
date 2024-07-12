@@ -1,5 +1,5 @@
 <label class="relative inline-flex items-center cursor-pointer">
-  <input type="checkbox" class="sr-only peer" data-role="theme-toggle-btn" />
+  <input :value="$store.theme.isDark" @change="$store.theme.toggle()" type="checkbox" class="sr-only peer" />
   <div class='theme-toggle'>
     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="text-yellow-500 dark:visible invisible size-6" xmlns="http://www.w3.org/2000/svg">
       <g>

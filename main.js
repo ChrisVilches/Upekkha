@@ -1,6 +1,6 @@
-import { Modal, Carousel } from "flowbite";
-
-// TODO: Was jQuery added again randomly?!?!?!??!??!?!?
+import { Modal } from "flowbite";
+import Alpine from "alpinejs";
+import { themeStore } from "./theme-store";
 
 function initSearchModal() {
   const modalElement = document.querySelector("#search-modal");
@@ -34,50 +34,6 @@ function initSearchModal() {
   }
 }
 
-function initRecommendedCarousel() {
-  const element = document.getElementById("recommended-carousel");
-  if (!element) return;
-
-  const items = Array.from(
-    document.querySelectorAll("[data-carousel-item]"),
-  ).map((el, position) => {
-    return { position, el };
-  });
-
-  const indicators = Array.from(
-    document.querySelectorAll("[data-carousel-indicator]"),
-  ).map((el, position) => {
-    return { position, el };
-  });
-
-  const options = {
-    defaultPosition: 0,
-    interval: 3000,
-    indicators: {
-      items: indicators,
-      // NOTE: Indicator style can be set here.
-      //       Add JS files to Tailwind content in order to write classes here.
-      // activeClasses: 'bg-slate-600',
-      // inactiveClasses: 'bg-slate-200',
-    },
-  };
-
-  const instanceOptions = {
-    id: "recommended-carousel",
-    override: true,
-  };
-
-  const carousel = new Carousel(element, items, options, instanceOptions);
-  carousel.cycle();
-
-  document
-    .querySelector("[data-carousel-prev]")
-    .addEventListener("click", carousel.prev.bind(carousel));
-  document
-    .querySelector("[data-carousel-next]")
-    .addEventListener("click", carousel.next.bind(carousel));
-}
-
 async function genQrSingle(selector, container) {
   const qr = (await import("qr-encode")).default;
   const element = container.querySelector(selector);
@@ -95,11 +51,6 @@ function initLineModalBtns() {
       genQrSingle("[data-role=line-qr]", modalElement);
     });
   }
-}
-
-function isThemeDark() {
-  const html = document.querySelector("html");
-  return html.classList.contains("dark");
 }
 
 let isMobileMemo = null;
@@ -124,45 +75,11 @@ function removeLoadingOverlay() {
   }, seconds * 1000);
 }
 
-function initThemeToggleBtns() {
-  // Doing this removes the theme color transitions when the overlay is removed.
-  // The color transitions do show if the user toggles the theme again though.
-  document.querySelector("#main-container").classList.remove("hidden");
-  if (localStorage.getItem("wp-theme") === "dark") {
-    document.querySelector("html").classList.add("dark");
-  }
-
-  const getBtns = () =>
-    document.querySelectorAll("[data-role=theme-toggle-btn]");
-
-  const syncState = () => {
-    const isDark = isThemeDark();
-    getBtns().forEach((el) => (el.checked = isDark));
-  };
-
-  syncState();
-
-  for (const element of getBtns()) {
-    element.addEventListener("change", () => {
-      const html = document.querySelector("html");
-      const isDark = isThemeDark();
-      if (isDark) {
-        html.classList.remove("dark");
-        localStorage.removeItem("wp-theme");
-      } else {
-        html.classList.add("dark");
-        localStorage.setItem("wp-theme", "dark");
-      }
-
-      syncState();
-    });
-  }
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   initSearchModal();
-  initRecommendedCarousel();
   initLineModalBtns();
-  initThemeToggleBtns();
   removeLoadingOverlay();
 });
+
+Alpine.store("theme", themeStore);
+Alpine.start();

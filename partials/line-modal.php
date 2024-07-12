@@ -3,7 +3,7 @@
     <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
       <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
         <!-- TODO: The font glitches a bit, even with all the loading I implemented -->
-        <h3 class="font-semibold text-gray-900 dark:text-white">
+        <h3 class="text-gray-900 dark:text-white">
           <i class="fa-brands fa-line text-green-500 pr-4"></i>Add me on Line!
         </h3>
         <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="<?= $args['modal-id'] ?>">

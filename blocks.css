@@ -4,33 +4,11 @@
 This CSS aims to cover common "Gutenberg" and "WP Githuber MD" blocks.
 However, it's not possible to cover all blocks, since the user could use any
 other editor library. So just add block styles as needed.
+
+@tailwindcss/typography handles many styles almost automatically.
 */
 
 .content-container {
-  /* Default margin-bottom for all blocks. */
-  p,
-  ul,
-  ol,
-  div,
-  a,
-  figure,
-  blockquote,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply mb-10;
-  }
-
-  @apply text-base;
-  @apply md:text-base-plus;
-
-  p {
-    @apply leading-9;
-  }
-
   a {
     @apply text-blue-600;
     @apply hover:text-blue-400;
@@ -52,25 +30,10 @@ other editor library. So just add block styles as needed.
     @apply px-1.5;
     @apply leading-7;
     @apply rounded-md;
-  }
-
-  ul,
-  ol {
-    @apply ml-10;
-    @apply list-outside;
-  }
-
-  ul {
-    @apply list-disc;
-  }
-
-  ol {
-    @apply list-decimal;
-  }
-
-  li {
-    @apply pl-1;
-    @apply mb-2;
+    &::after,
+    &::before {
+      content: "";
+    }
   }
 
   /* Image Block */
@@ -115,6 +78,21 @@ other editor library. So just add block styles as needed.
     @apply border-black;
     @apply dark:border-white;
 
+    @apply font-normal;
+
+    cite {
+      @apply text-gray-500 dark:text-gray-400;
+    }
+
+    p {
+      &::before {
+        content: "";
+      }
+      &::after {
+        content: "";
+      }
+    }
+
     &::before {
       font-family: "Font Awesome 6 Free", sans-serif;
       content: "\f10d";
@@ -122,20 +100,6 @@ other editor library. So just add block styles as needed.
       @apply font-bold;
       @apply text-2xl;
       @apply absolute;
-    }
-
-    p {
-      @apply pb-2;
-      @apply italic;
-      @apply text-base;
-      @apply md:text-base-plus;
-    }
-
-    cite {
-      @apply text-base;
-      @apply md:text-base-plus;
-      @apply text-slate-600;
-      @apply dark:text-slate-200;
     }
   }
 }

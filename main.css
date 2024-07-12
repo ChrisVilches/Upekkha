@@ -53,7 +53,6 @@ h6 {
   @apply md:grow-0;
   @apply py-2.5;
   @apply px-5;
-  @apply text-base;
   @apply font-medium;
   @apply focus:outline-none;
   @apply text-gray-900;
@@ -136,7 +135,6 @@ img.custom-logo {
     @apply border-l-yellow-200;
     @apply pl-4;
     @apply text-yellow-200;
-    @apply text-lg;
   }
 
   a {

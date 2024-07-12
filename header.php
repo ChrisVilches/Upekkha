@@ -56,7 +56,7 @@
         </button>
       </div>
 
-      <div class="prose prose-invert prose-sm md:prose md:prose-invert prose-li:my-0 prose-a:no-underline max-w-none">
+      <div class="prose prose-invert prose-sm md:prose md:prose-invert prose-li:my-0 prose-li:list-none prose-ul:pl-0 prose-a:no-underline max-w-none">
         <div class="md:hidden sidebar-responsive-menu-container">
           <? wp_nav_menu(array('theme_location' => 'responsive-menu')) ?>
         </div>

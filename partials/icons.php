@@ -9,7 +9,7 @@ $prefix = uniqid('a') . "-";
     if (empty($value)) continue;
     ?>
     <? if ($site == "line") : ?>
-      <div x-data="lineQr">
+      <div x-data="lineQr('<?= $value ?>')">
         <button @click="loadQr" data-modal-target="<?= $prefix . $site ?>-modal" data-modal-toggle="<?= $prefix . $site ?>-modal" type="button" data-tooltip-target="<?= $prefix . $site ?>-tooltip" class="<?= $data['class'] ?> size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">
           <i class="fa-brands fa-<?= $data['fa-icon'] ?>"></i>
         </button>

@@ -1,8 +1,15 @@
-export const lineQr = () => ({
+export const lineQr = (lineId) => ({
+  init() {
+    this.lineId = lineId
+  },
+
   async loadQr() {
     const qr = (await import("qr-encode")).default;
-    const content = this.$refs.img.getAttribute("data-qr-content");
-    this.qrData = this.qrData ?? qr(content, { type: 6, size: 6, level: "Q" });
+    this.qrData = this.qrData ?? qr(this.url, { type: 6, size: 6, level: "Q" });
+  },
+
+  get url() {
+    return `line://ti/p/~${this.lineId}`
   },
 
   qrData: null,

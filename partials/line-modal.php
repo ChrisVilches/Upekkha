@@ -14,7 +14,7 @@
         </button>
       </div>
       <div class="flex justify-center items-center my-10">
-        <img x-ref="img" x-show="qrData !== null" :src="qrData" data-qr-content="line://ti/p/~<?= $args['line-id'] ?>">
+        <img x-show="qrData !== null" :src="qrData">
         <div x-show="qrData === null" role="status" class="w-[246px] h-[246px] animate-pulse block bg-gray-200 dark:bg-gray-600 rounded-lg">
           <span class="sr-only">Loading...</span>
         </div>

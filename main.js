@@ -1,6 +1,7 @@
 import { Modal } from "flowbite";
 import Alpine from "alpinejs";
 import { themeStore } from "./theme-store";
+import { lineQr } from "./line-qr";
 
 function initSearchModal() {
   const modalElement = document.querySelector("#search-modal");
@@ -34,25 +35,6 @@ function initSearchModal() {
   }
 }
 
-async function genQrSingle(selector, container) {
-  const qr = (await import("qr-encode")).default;
-  const element = container.querySelector(selector);
-  const content = element.getAttribute("data-qr-content");
-  element.src = qr(content, { type: 6, size: 6, level: "Q" });
-}
-
-function initLineModalBtns() {
-  for (const element of document.querySelectorAll(
-    "[data-role=line-modal-btn]",
-  )) {
-    element.addEventListener("click", () => {
-      const modalId = element.getAttribute("data-modal-target");
-      const modalElement = document.querySelector(`#${modalId}`);
-      genQrSingle("[data-role=line-qr]", modalElement);
-    });
-  }
-}
-
 let isMobileMemo = null;
 
 function isMobile() {
@@ -77,9 +59,9 @@ function removeLoadingOverlay() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initSearchModal();
-  initLineModalBtns();
   removeLoadingOverlay();
 });
 
 Alpine.store("theme", themeStore);
+Alpine.data("lineQr", lineQr);
 Alpine.start();

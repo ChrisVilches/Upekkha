@@ -14,7 +14,10 @@
         </button>
       </div>
       <div class="flex justify-center items-center my-10">
-        <img src="" data-role="line-qr" data-qr-content="line://ti/p/~<?= $args['line-id'] ?>">
+        <img x-ref="img" x-show="qrData !== null" :src="qrData" data-qr-content="line://ti/p/~<?= $args['line-id'] ?>">
+        <div x-show="qrData === null" role="status" class="w-[246px] h-[246px] animate-pulse block bg-gray-200 dark:bg-gray-600 rounded-lg">
+          <span class="sr-only">Loading...</span>
+        </div>
       </div>
       <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
         <button data-modal-hide="<?= $args['modal-id'] ?>" type="button" class="secondary-btn">Close</button>

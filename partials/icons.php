@@ -9,14 +9,16 @@ $prefix = uniqid('a') . "-";
     if (empty($value)) continue;
     ?>
     <? if ($site == "line") : ?>
-      <button data-role="line-modal-btn" data-modal-target="<?= $prefix . $site ?>-modal" data-modal-toggle="<?= $prefix . $site ?>-modal" type="button" data-tooltip-target="<?= $prefix . $site ?>-tooltip" class="<?= $data['class'] ?> size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">
-        <i class="fa-brands fa-<?= $data['fa-icon'] ?>"></i>
-      </button>
-      <div class="absolute">
-        <? get_template_part('./partials/line-modal', null, array(
-          "modal-id" => $prefix . $site . "-modal",
-          "line-id" => $value
-        )) ?>
+      <div x-data="lineQr">
+        <button @click="loadQr" data-modal-target="<?= $prefix . $site ?>-modal" data-modal-toggle="<?= $prefix . $site ?>-modal" type="button" data-tooltip-target="<?= $prefix . $site ?>-tooltip" class="<?= $data['class'] ?> size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">
+          <i class="fa-brands fa-<?= $data['fa-icon'] ?>"></i>
+        </button>
+        <div class="absolute">
+          <? get_template_part('./partials/line-modal', null, array(
+            "modal-id" => $prefix . $site . "-modal",
+            "line-id" => $value
+          )) ?>
+        </div>
       </div>
     <? else : ?>
       <a data-tooltip-target="<?= $prefix . $site ?>-tooltip" href="<?= $value ?>" target="_blank" class="<?= $data['class'] ?> size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">

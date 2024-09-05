@@ -12,7 +12,7 @@
 
 <? if (!empty($args['author']->user_url)) : ?>
   <div class="flex justify-end mt-2">
-    <a data-tooltip-target="author-website-tooltip" href="<?= $args['author']->user_url ?>" target="_blank" class="size-10 flex items-center border-black justify-center hover:bg-slate-700 bg-slate-800 text-slate-200 hover:text-slate-100 rounded-md transition-colors duration-200">
+    <a aria-label="Author website" data-tooltip-target="author-website-tooltip" href="<?= $args['author']->user_url ?>" target="_blank" class="size-10 flex items-center border-black justify-center hover:bg-slate-700 bg-slate-800 text-slate-200 hover:text-slate-100 rounded-md transition-colors duration-200">
       <i class="fa fa-house"></i>
     </a>
 

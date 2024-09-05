@@ -54,7 +54,6 @@ h6 {
   @apply py-2.5;
   @apply px-5;
   @apply font-medium;
-  @apply focus:outline-none;
   @apply text-gray-900;
   @apply bg-white;
   @apply dark:bg-gray-700;

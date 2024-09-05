@@ -6,10 +6,8 @@
   @apply bg-gray-200 dark:bg-gray-700;
   @apply rounded-full;
 
-  @apply peer-focus:ring-4;
-  @apply peer-focus:outline-none;
-  @apply peer-focus:ring-gray-300;
-  @apply dark:peer-focus:ring-gray-800;
+  @apply peer-focus:outline;
+  @apply peer-focus:outline-white;
   @apply peer-checked:after:translate-x-full;
   @apply peer-checked:after:left-8;
 

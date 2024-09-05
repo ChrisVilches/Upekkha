@@ -39,13 +39,13 @@
         <? endforeach ?>
       </div>
 
-      <button data-carousel-prev type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-slate-100 bg-slate-400/30 hover:bg-slate-500/50 transition-colors duration-400">
+      <button data-carousel-prev type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group text-slate-100 bg-slate-400/30 hover:bg-slate-500/50 transition-colors duration-400">
         <span class="inline-flex items-center justify-center w-10 h-10">
           <i class="fa-solid fa-chevron-left"></i>
           <span class="sr-only">Previous</span>
         </span>
       </button>
-      <button data-carousel-next type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none text-slate-100 bg-slate-400/30 hover:bg-slate-500/50 transition-colors duration-400">
+      <button data-carousel-next type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group text-slate-100 bg-slate-400/30 hover:bg-slate-500/50 transition-colors duration-400">
         <span class="inline-flex items-center justify-center w-10 h-10">
           <i class="fa-solid fa-chevron-right"></i>
           <span class="sr-only">Next</span>

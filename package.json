@@ -10,12 +10,13 @@
     "js:dev": "NODE_ENV=development node esbuild.config.mjs",
     "prebuild:prod": "rm -rf dist",
     "build:prod": "npm run css:prod && npm run js:prod",
-    "lint": "prettier --write '**/*.{js,css,mjs}'"
+    "lint": "prettier --write '**/*.{js,css,mjs,php}'"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@prettier/plugin-php": "^0.22.2",
     "@tailwindcss/typography": "^0.5.13",
     "autoprefixer": "^10.4.19",
     "cssnano": "^7.0.4",

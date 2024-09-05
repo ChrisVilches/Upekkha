@@ -1,7 +1,28 @@
-import { Modal } from "flowbite";
+import { Modal, Drawer } from "flowbite";
 import Alpine from "alpinejs";
 import { themeStore } from "./theme-store";
 import { lineQr } from "./line-qr";
+
+function initSidebar(sidebarId) {
+  const $targetEl = document.getElementById(sidebarId);
+  const $content = $targetEl.querySelector("[data-role=sidebar-content]");
+  $content.classList.add("hidden");
+
+  // TODO: Functionality missing: Make only the content inside the sidebar navigable using TAB key.
+  const options = {
+    placement: "left",
+    onHide: () => {
+      setTimeout(() => {
+        $content.classList.add("hidden");
+      }, 300);
+    },
+    onShow: () => {
+      $content.classList.remove("hidden");
+    },
+  };
+
+  return new Drawer($targetEl, options);
+}
 
 function initSearchModal() {
   const modalElement = document.querySelector("#search-modal");
@@ -59,6 +80,7 @@ function removeLoadingOverlay() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initSearchModal();
+  initSidebar("sidebar-drawer");
   removeLoadingOverlay();
 });
 

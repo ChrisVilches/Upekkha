@@ -10,7 +10,7 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
 
-      <button type="button" class="p-2 text-gray-300 hover:text-gray-100 duration-200 transition-colors" data-drawer-target="sidebar-drawer" data-drawer-show="sidebar-drawer" aria-controls="sidebar-drawer">
+      <button type="button" class="p-2 text-gray-300 hover:text-gray-100 duration-200 transition-colors" data-drawer-show="sidebar-drawer" aria-controls="sidebar-drawer">
         <span class="sr-only">Menu</span>
         <i class="fa fa-bars"></i>
       </button>
@@ -44,23 +44,28 @@
     // (Issue was only seen on Chrome. Firefox renders the scrollbar differently, so there was no problem).
 
     // TODO: Not yet fixed!!! I just checked the production site, and still shows.
+    // Note, now I use a programmatic drawer, so I can sanitize the look when it's closed easily.
+    // I think it got fixed with the new JS mechanism
     ?>
-    <div id="sidebar-drawer" class="text-slate-200 bg-slate-900 pl-10 pr-10 pb-10 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 -left-[0.1px] z-40 h-full overflow-y-auto transition-transform -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" tabindex="-1" aria-labelledby="drawer-label">
-      <div class="flex mb-4 sticky top-0 bg-slate-900 py-4">
-        <div class="grow">
-          <? get_template_part('./partials/theme-toggle') ?>
-        </div>
-        <button type="button" data-drawer-hide="sidebar-drawer" aria-controls="sidebar-drawer" class="text-gray-400 p-2 bg-transparent rounded-lg flex items-center justify-center">
-          <i class="fa-solid fa-xmark text-xl"></i>
-          <span class="sr-only">Close</span>
-        </button>
-      </div>
 
-      <div class="prose prose-invert prose-sm md:prose md:prose-invert prose-li:my-0 prose-li:list-none prose-ul:pl-0 prose-a:no-underline max-w-none">
-        <div class="md:hidden sidebar-responsive-menu-container">
-          <? wp_nav_menu(array('theme_location' => 'responsive-menu')) ?>
+    <div id="sidebar-drawer" class="text-slate-200 bg-slate-900 pl-10 pr-10 pb-10 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 z-40 h-full overflow-y-auto -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" aria-label="Menu" tabindex="-1">
+      <div data-role="sidebar-content">
+        <div class="flex mb-4 sticky top-0 bg-slate-900 py-4">
+          <div class="grow">
+            <? get_template_part('./partials/theme-toggle') ?>
+          </div>
+          <button type="button" data-drawer-hide="sidebar-drawer" aria-controls="sidebar-drawer" class="text-gray-400 p-2 bg-transparent rounded-lg flex items-center justify-center">
+            <i class="fa-solid fa-xmark text-xl"></i>
+            <span class="sr-only">Close</span>
+          </button>
         </div>
-        <? dynamic_sidebar('sidebar-widget') ?>
+
+        <div class="prose prose-invert prose-sm md:prose md:prose-invert prose-li:my-0 prose-li:list-none prose-ul:pl-0 prose-a:no-underline max-w-none">
+          <div class="md:hidden sidebar-responsive-menu-container">
+            <? wp_nav_menu(array('theme_location' => 'responsive-menu')) ?>
+          </div>
+          <? dynamic_sidebar('sidebar-widget') ?>
+        </div>
       </div>
     </div>
 
@@ -72,7 +77,7 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
 
-      <button type="button" class="p-2 text-gray-300 hover:text-gray-100 duration-200 transition-colors" data-drawer-target="sidebar-drawer" data-drawer-show="sidebar-drawer" aria-controls="sidebar-drawer">
+      <button type="button" class="p-2 text-gray-300 hover:text-gray-100 duration-200 transition-colors" data-drawer-show="sidebar-drawer" aria-controls="sidebar-drawer">
         <span class="sr-only">Menu</span>
         <i class="fa fa-bars"></i>
       </button>

@@ -1,6 +1,6 @@
 export const lineQr = (lineId) => ({
   init() {
-    this.lineId = lineId
+    this.lineId = lineId;
   },
 
   async loadQr() {
@@ -9,7 +9,7 @@ export const lineQr = (lineId) => ({
   },
 
   get url() {
-    return `line://ti/p/~${this.lineId}`
+    return `line://ti/p/~${this.lineId}`;
   },
 
   qrData: null,

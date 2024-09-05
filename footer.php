@@ -7,6 +7,6 @@
       <? get_template_part('./partials/icons') ?>
     </div>
     <? wp_footer() ?>
-    © <?= date('Y') ?> <? bloginfo('name') ?>
+    © <?= date("Y") ?> <? bloginfo('name') ?>
   </div>
 </div>

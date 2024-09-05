@@ -8,6 +8,9 @@
 </head>
 
 <body class="md:container md:my-16 bg-slate-200 dark:bg-slate-900 overflow-hidden">
+  <a class="absolute text-white p-2 left opacity-0 focus:opacity-100" href="#main">
+    Skip to content
+  </a>
   <div id="loading-overlay" class="flex justify-center items-center fixed inset-0 w-full h-screen bg-slate-800 z-50">
     <? /* Hardcode the SVG (for slow connections) */ ?>
     <svg class="text-slate-200 size-8 animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -22,4 +25,4 @@
   </div>
 
   <!-- Must be hidden so that the theme switch doesn't do any color transition. -->
-  <main class="flex-grow bg-white dark:bg-slate-600 dark:text-white my-8 py-10 hidden" id="main-container">
+  <main class="flex-grow bg-white dark:bg-slate-600 dark:text-white my-8 py-10 hidden" id="main">

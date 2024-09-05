@@ -10,7 +10,7 @@ $prefix = uniqid('a') . "-";
     ?>
     <? if ($site == "line") : ?>
       <div x-data="lineQr('<?= $value ?>')">
-        <button @click="loadQr" data-modal-target="<?= $prefix . $site ?>-modal" data-modal-toggle="<?= $prefix . $site ?>-modal" type="button" data-tooltip-target="<?= $prefix . $site ?>-tooltip" class="<?= $data['class'] ?> size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">
+        <button aria-label="Line" @click="loadQr" data-modal-target="<?= $prefix . $site ?>-modal" data-modal-toggle="<?= $prefix . $site ?>-modal" type="button" data-tooltip-target="<?= $prefix . $site ?>-tooltip" class="<?= $data['class'] ?> size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">
           <i class="fa-brands fa-<?= $data['fa-icon'] ?>"></i>
         </button>
         <div class="absolute">
@@ -32,7 +32,7 @@ $prefix = uniqid('a') . "-";
     </div>
   <? endforeach ?>
 
-  <a data-tooltip-target="<?= $prefix ?>rss" href="<?= get_feed_link() ?>" target="_blank" class="hover:text-orange-400 size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">
+  <a aria-label="RSS" data-tooltip-target="<?= $prefix ?>rss" href="<?= get_feed_link() ?>" target="_blank" class="hover:text-orange-400 size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">
     <i class="fa-solid fa-rss"></i>
   </a>
 

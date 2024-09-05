@@ -9,7 +9,7 @@
       <div class="p-8 hidden md:block">
       </div>
     <? else : ?>
-      <a class="p-8 text-black dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-800 duration-200 transition-colors" rel="prev" href="<?= get_permalink($prev) ?>">
+      <a aria-label="Previous page" class="p-8 text-black dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-800 duration-200 transition-colors" rel="prev" href="<?= get_permalink($prev) ?>">
         <div class="flex">
           <div class="font-bold">
             <i class="fa fa-chevron-left"></i>
@@ -27,7 +27,7 @@
       <div class="text-end p-8 hidden md:block">
       </div>
     <? else : ?>
-      <a class="text-end p-8 text-black dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-800 duration-200 transition-colors" rel="next" href="<?= get_permalink($next) ?>">
+      <a aria-label="Next page" class="text-end p-8 text-black dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-800 duration-200 transition-colors" rel="next" href="<?= get_permalink($next) ?>">
         <div class="flex">
           <div class="mr-4 grow">
             <div class="font-bold mb-8">Next post</div>

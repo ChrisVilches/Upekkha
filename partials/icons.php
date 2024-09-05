@@ -21,8 +21,8 @@ $prefix = uniqid('a') . "-";
         </div>
       </div>
     <? else : ?>
-      <a data-tooltip-target="<?= $prefix . $site ?>-tooltip" href="<?= $value ?>" target="_blank" class="<?= $data['class'] ?> size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">
-        <i class="fa-brands fa-<?= $data['fa-icon'] ?>"></i>
+      <a aria-label="<?= $data["label"] ?>" data-tooltip-target="<?= $prefix . $site ?>-tooltip" href="<?= $value ?>" target="_blank" class="<?= $data[ "class" ] ?> size-10 flex items-center border-black justify-center bg-transparent text-slate-400 rounded-md transition-colors duration-500">
+        <i class="fa-brands fa-<?= $data["fa-icon"] ?>"></i>
       </a>
     <? endif ?>
 

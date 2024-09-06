@@ -2,22 +2,29 @@ import { Modal, Drawer } from "flowbite";
 import Alpine from "alpinejs";
 import { themeStore } from "./theme-store";
 import { lineQr } from "./line-qr";
+import { createFocusTrap } from "./focus-trap";
 
 function initSidebar(sidebarId) {
   const $targetEl = document.getElementById(sidebarId);
   const $content = $targetEl.querySelector("[data-role=sidebar-content]");
   $content.classList.add("hidden");
 
-  // TODO: Functionality missing: Make only the content inside the sidebar navigable using TAB key.
+  const trap = createFocusTrap(
+    $content,
+    $content.querySelector("button, a, input"),
+  );
+
   const options = {
     placement: "left",
     onHide: () => {
+      window.removeEventListener("focusin", trap);
       setTimeout(() => {
         $content.classList.add("hidden");
       }, 300);
     },
     onShow: () => {
       $content.classList.remove("hidden");
+      window.addEventListener("focusin", trap);
     },
   };
 

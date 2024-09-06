@@ -2,25 +2,25 @@ import { Modal, Drawer } from "flowbite";
 import Alpine from "alpinejs";
 import { themeStore } from "./theme-store";
 import { lineQr } from "./line-qr";
-import { FocusTrap } from "./focus-trap"
+import { FocusTrap } from "./focus-trap";
 
 function initSidebar(sidebarId) {
   const $targetEl = document.getElementById(sidebarId);
   const $content = $targetEl.querySelector("[data-role=sidebar-content]");
   $content.classList.add("hidden");
 
-  const trap = new FocusTrap($content)
+  const trap = new FocusTrap($content);
 
   const options = {
     placement: "left",
     onHide: () => {
-      trap.disable()
+      trap.disable();
       setTimeout(() => {
         $content.classList.add("hidden");
       }, 300);
     },
     onShow: () => {
-      trap.enable()
+      trap.enable();
       $content.classList.remove("hidden");
     },
   };

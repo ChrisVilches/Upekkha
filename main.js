@@ -9,10 +9,7 @@ function initSidebar(sidebarId) {
   const $content = $targetEl.querySelector("[data-role=sidebar-content]");
   $content.classList.add("hidden");
 
-  const trap = createFocusTrap(
-    $content,
-    $content.querySelector("button, a, input"),
-  );
+  const trap = createFocusTrap($content);
 
   const options = {
     placement: "left",

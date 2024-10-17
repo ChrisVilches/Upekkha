@@ -16,6 +16,7 @@ other editor library. So just add block styles as needed.
     @apply dark:hover:text-blue-300;
     @apply transition-colors;
     @apply duration-300;
+    @apply underline;
   }
 
   code {

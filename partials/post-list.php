@@ -10,7 +10,9 @@
         </h1>
         <? if (has_post_thumbnail()) : ?>
           <div class="w-full max-h-40 mt-8">
-            <? the_post_thumbnail('medium', array("class" => "object-cover max-h-40 w-full")) ?>
+            <?
+// TODO: Maybe image is too big?????? Reduce resolution (compress them). Should be possible inside WP.
+the_post_thumbnail('medium', array("class" => "object-cover max-h-40 w-full")) ?>
           </div>
         <? endif ?>
       </a>

@@ -21,7 +21,9 @@ $archive_date = ThemeUtil::get_archive_date_fmt();
 
       <? if ($filter) : ?>
         <div>
-          <span class="font-bold"><?= $filter['taxonomy'] ?>:</span> <?= $filter['value'] ?>
+          <span class="font-bold"><?= $filter[
+              "taxonomy"
+          ] ?>:</span> <?= $filter["value"] ?>
         </div>
       <? endif ?>
     </div>

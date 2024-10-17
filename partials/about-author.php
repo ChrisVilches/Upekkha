@@ -1,18 +1,23 @@
-<h2 class="text-center mb-10">About <?= $args['author']->display_name ?></h2>
+<h2 class="text-center mb-10">About <?= $args["author"]->display_name ?></h2>
 
 <div class="md:flex">
   <div class="flex justify-center mb-8">
-    <?= get_avatar($args['author']->ID, 64, null, null, array("class" => "rounded-full")) ?>
+    <?= get_avatar($args["author"]->ID, 64, null, null, [
+        "class" => "rounded-full",
+    ]) ?>
   </div>
 
   <div class="grow px-10 text-center md:text-start mb-8">
-    <?= $args['author']->description ?>
+    <?= $args["author"]->description ?>
   </div>
 </div>
 
 <? if (!empty($args['author']->user_url)) : ?>
   <div class="flex justify-end mt-2">
-    <a aria-label="Author website" data-tooltip-target="author-website-tooltip" href="<?= $args['author']->user_url ?>" target="_blank" class="size-10 flex items-center border-black justify-center hover:bg-slate-700 bg-slate-800 text-slate-200 hover:text-slate-100 rounded-md transition-colors duration-200">
+    <a aria-label="Author website" data-tooltip-target="author-website-tooltip" href="<?= $args[
+        "author"
+    ]
+        ->user_url ?>" target="_blank" class="size-10 flex items-center border-black justify-center hover:bg-slate-700 bg-slate-800 text-slate-200 hover:text-slate-100 rounded-md transition-colors duration-200">
       <i class="fa fa-house"></i>
     </a>
 

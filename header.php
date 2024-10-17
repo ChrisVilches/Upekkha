@@ -46,6 +46,8 @@
     // TODO: Not yet fixed!!! I just checked the production site, and still shows.
     // Note, now I use a programmatic drawer, so I can sanitize the look when it's closed easily.
     // I think it got fixed with the new JS mechanism
+    // I think it got fixed because when the content is hidden, the scrollbar doesn't need to be shown,
+    // so it disappears too. It glitches slightly but almost unnoticeably.
     ?>
 
     <div id="sidebar-drawer" class="text-slate-200 bg-slate-900 pl-10 pr-10 pb-10 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300 sidebar-drawer fixed top-0 z-40 h-full overflow-y-auto -translate-x-full lg:w-1/2 max-w-[calc(100%-5rem)]" aria-label="Menu" tabindex="-1">

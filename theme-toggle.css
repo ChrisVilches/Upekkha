@@ -7,7 +7,8 @@
   @apply rounded-full;
 
   @apply peer-focus:outline;
-  @apply peer-focus:outline-white;
+  @apply peer-focus:outline-gray-600;
+  @apply dark:peer-focus:outline-yellow-500;
   @apply peer-checked:after:translate-x-full;
   @apply peer-checked:after:left-8;
 

@@ -107,6 +107,11 @@ class CustomTheme
       "fa-icon" => "instagram",
       "class" => "hover:text-pink-500"
     ),
+    "email" => array(
+      "label" => "E-mail",
+      "fa-icon" => "envelope",
+      "class" => "hover:text-white"
+    ),
   );
 
   static function assets()

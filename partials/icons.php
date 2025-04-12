@@ -6,6 +6,11 @@ $prefix = uniqid('a') . "-";
   <? foreach (CustomTheme::$social_sites as $site => $data) : ?>
     <?
     $value = get_theme_mod('social-sites-' . $site);
+
+    if ($site == "email") {
+        $value = 'mailto:' . $value;
+    }
+
     if (empty($value)) continue;
     ?>
     <? if ($site == "line") : ?>

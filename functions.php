@@ -75,41 +75,49 @@ class CustomTheme
     "facebook" => array(
       "label" => "Facebook",
       "fa-icon" => "facebook",
+      "fa-icon-type" => "brands",
       "class" => "hover:text-blue-500"
     ),
     "github" => array(
       "label" => "Github",
       "fa-icon" => "github",
+      "fa-icon-type" => "brands",
       "class" => "hover:text-white"
     ),
     "x" => array(
       "label" => "X (Twitter)",
       "fa-icon" => "x-twitter",
+      "fa-icon-type" => "brands",
       "class" => "hover:text-white"
     ),
     "youtube" => array(
       "label" => "YouTube",
       "fa-icon" => "youtube",
+      "fa-icon-type" => "brands",
       "class" => "hover:text-red-500"
     ),
     "linkedin" => array(
       "label" => "LinkedIn",
       "fa-icon" => "linkedin",
+      "fa-icon-type" => "brands",
       "class" => "hover:text-blue-600"
     ),
     "line" => array(
       "label" => "Line",
       "fa-icon" => "line",
+      "fa-icon-type" => "brands",
       "class" => "hover:text-green-500"
     ),
     "instagram" => array(
       "label" => "Instagram",
       "fa-icon" => "instagram",
+      "fa-icon-type" => "brands",
       "class" => "hover:text-pink-500"
     ),
     "email" => array(
       "label" => "E-mail",
       "fa-icon" => "envelope",
+      "fa-icon-type" => "regular",
       "class" => "hover:text-white"
     ),
   );

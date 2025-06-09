@@ -1,4 +1,6 @@
 <?
+// TODO: It's possible to add more entropy just in case.
+// Because actually this isn't guaranteed to be unique lol...
 $prefix = uniqid('a') . "-";
 ?>
 
